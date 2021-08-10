@@ -1,0 +1,19 @@
+<l-arc-popup content-align="bottom" show="{{show}}" bind:lintap="onCancel">
+    <view class="container">
+        <view class="main-conatiner">
+            <view class="content" bind:tap="onUploadFile">
+                <image src="/imgs/data/file/upload.png"></image>
+                <text>上传</text>
+            </view>
+            <view class="content" bind:tap="onEditCollect">
+                <image src="/imgs/data/edit.png"></image>
+                <text>编辑</text>
+            </view>
+            <view class="content" bind:tap="onGetStatistics">
+                <image src="/imgs/data/statistics.png"></image>
+                <text>统计</text>
+            </view>
+        </view>
+        <view class="cancel" bind:tap="onCancel">取消</view>
+    </view>
+</l-arc-popup>

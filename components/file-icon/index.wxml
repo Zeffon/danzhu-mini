@@ -1,0 +1,13 @@
+<view class="container">
+    <image wx:if="{{ext == 'PDF'}}" src="/imgs/data/file/pdf.png"></image>
+    <image wx:elif="{{ext == 'XLS'}}" src="/imgs/data/file/xls.png"></image>
+    <image wx:elif="{{ext == 'XLSX'}}" src="/imgs/data/file/xls.png"></image>
+    <image wx:elif="{{ext == 'DOC'}}" src="/imgs/data/file/word.png"></image>
+    <image wx:elif="{{ext == 'DOCX'}}" src="/imgs/data/file/word.png"></image>
+    <image wx:elif="{{ext == 'PPT'}}" src="/imgs/data/file/ppt.png"></image>
+    <image wx:elif="{{ext == 'PPTX'}}" src="/imgs/data/file/ppt.png"></image>
+    <image wx:elif="{{ext == 'PNG'}}" src="/imgs/data/file/image.png"></image>
+    <image wx:elif="{{ext == 'JPG'}}" src="/imgs/data/file/image.png"></image>
+    <image wx:elif="{{ext == 'JPEG'}}" src="/imgs/data/file/image.png"></image>
+    <image wx:else src="/imgs/data/file/other-file.png"></image>
+</view>

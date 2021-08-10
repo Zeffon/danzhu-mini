@@ -1,0 +1,4 @@
+<view class="container">
+  <view class="fui-switch {{value ? 'disabled' : ''}}" type="checkbox" bind:tap="onSwitchItem">
+  </view>
+</view>

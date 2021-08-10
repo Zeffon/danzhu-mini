@@ -1,0 +1,37 @@
+<scroll-view scroll-y style="height:{{h}}rpx;" bindscrolltolower='onScrollTolower' wx:if="{{!isEmpty}}">
+    <l-loadmore show="{{bottomLoading}}" type="{{loadingType}}" loading-text="努力加载中..." end-text="别拉了，我也是有底线的T_T">
+        <view slot="content">
+            <block wx:for="{{items}}" wx:key="index">
+                <z-collect-user item="{{item}}" bind:deletetap="onDeleteUser"></z-collect-user>
+            </block>
+        </view>
+    </l-loadmore>
+</scroll-view>
+<z-empty wx:else bind:btntap="onGotoShare" show-btn show text="当前收集夹没有用户" btn-text="去邀请"></z-empty>
+
+<view class="bottom-container">
+    <view></view>
+    <view class="more-container" bind:tap="onOpenMorePopup">
+        <l-icon name="more2" l-class="danzhu"></l-icon>
+        <text>更多</text>
+    </view>
+    <l-button special bind:lintap="onOpenCodePopup">
+        <view class="code-btn">
+            生成提取码
+        </view>
+    </l-button>
+</view>
+
+<z-code-realm show="{{codePopup}}" isCreate="{{isCreate}}" link="{{link}}" bind:cancel="onCloseCodePopup"
+    bind:create="onCreateLink">
+</z-code-realm>
+<z-more-realm show="{{morePopup}}" bind:cancel="onCloseMorePopup" bind:upload="onOpenCategory" bind:edit="onGotoEdit"
+    bind:get="onGotoGet">
+</z-more-realm>
+
+<z-file-category show="{{showCategory}}" bind:cancel="onCloseCategory" bind:imagetap="onSelectImage"
+    bind:filetap="onSelectFile"></z-file-category>
+<z-uploading show="{{showUploading}}" percent="{{percent}}" count="{{uploadCount}}"></z-uploading>
+
+<l-toast></l-toast>
+<l-dialog></l-dialog>

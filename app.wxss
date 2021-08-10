@@ -1,0 +1,71 @@
+page {
+  background-color: #ffffff;
+}
+
+@font-face {
+  font-family: 'danzhu';  /* project id 2112637 */
+  src: url('//at.alicdn.com/t/font_2112637_8oe7kkllh8p.eot');
+  src: url('//at.alicdn.com/t/font_2112637_8oe7kkllh8p.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2112637_8oe7kkllh8p.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2112637_8oe7kkllh8p.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2112637_8oe7kkllh8p.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2112637_8oe7kkllh8p.svg#danzhu') format('svg');
+}
+
+.danzhu {
+  font-family: danzhu !important;
+  color: #09AAFF !important;
+  /* color: #71AA3A !important; */
+}
+
+.l-icon-empty:before {
+  content: "\e618";
+}
+
+.l-icon-check:before {
+  content: "\e61e";
+}
+
+.l-icon-add-us:before {
+  content: "\e605";
+}
+
+.l-icon-wechat:before {
+  content: "\e63e";
+}
+
+.l-icon-moments:before {
+  content: "\e6e9";
+}
+
+.l-icon-waiting:before {
+  content: "\e606";
+}
+
+.l-icon-passed:before {
+  content: "\e671";
+}
+
+.l-icon-refused:before {
+  content: "\e634";
+}
+
+.l-icon-all:before {
+  content: "\e650";
+}
+
+.l-icon-about:before {
+  content: "\e645";
+}
+
+.l-icon-help1:before {
+  content: "\e60e";
+}
+
+.l-icon-file:before {
+  content: "\e604";
+}
+
+.l-icon-more2:before {
+  content: "\e625";
+}

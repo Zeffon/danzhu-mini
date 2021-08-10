@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="header">
+        <view class="header-title">已删除的文件</view>
+    </view>
+    <block wx:for="{{items}}" wx:key="index">
+        <z-file-trash item="{{item}}" bind:itemtap="onOpenPopup"></z-file-trash>
+    </block>
+</view>
+
+<l-arc-popup content-align="bottom" show="{{showPopup}}" bind:lintap="onClosePopup">
+    <view class="p-container">
+        <text class="title">{{file.title}}</text>
+        <view class="main-container">
+            <view class="content" bind:tap="onRestoreFile">
+                <image src="/imgs/data/file/restore.png"></image>
+                <text>恢复</text>
+            </view>
+            <view class="content" bind:tap="onDeleteFile">
+                <image src="/imgs/data/file/trash.png"></image>
+                <text>粉碎</text>
+            </view>
+        </view>
+        <view class="cancel" bind:tap="onClosePopup">取消</view>
+    </view>
+</l-arc-popup>
+
+<l-toast></l-toast>
+<l-dialog></l-dialog>

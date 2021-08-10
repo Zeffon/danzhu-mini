@@ -1,0 +1,29 @@
+/* components/counter2/index.wxss */
+.container {
+  border: 1px #09AAFF solid;
+  padding: 8rpx;
+  width: 154rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #212121;
+}
+
+.up-triangle {
+  width: 0px;
+  height: 0px;
+  border-width: 3px;/* 边框宽度 */
+  border-style: solid;/* 边框为实线 */
+  border-color: transparent transparent #09AAFF transparent;
+  margin-bottom: 10rpx;
+}
+
+.down-triangle {
+    width: 0px;
+    height: 0px;
+    border-width: 3px;/* 边框宽度 */
+    border-style: solid;/* 边框为实线 */
+    border-color: #09AAFF transparent transparent transparent;
+}

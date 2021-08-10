@@ -1,0 +1,115 @@
+/* components/group-detail/index.wxss */
+.container {
+  margin-top: 6rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 700rpx;
+  box-shadow: 0px 0px 8px 0px rgba(119, 163, 149, 0.5);
+  border-radius: 4rpx;
+  padding: 10rpx 20rpx;
+  color: #212121;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.header-container view {
+  flex: 1;
+}
+
+.code-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-container {
+  color: #212121;
+  font-size: 24rpx;
+  padding: 6rpx 0;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rpx 0;
+}
+
+.avatar {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.nickname {
+  color: #212121;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 
+.more {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.more-detail {
+  color: #212121;
+  font-size: 22rpx;
+}
+
+.more-detail l-icon {
+  margin-left: 6rpx;
+} */
+
+.bottom-container {
+  border-top: 1px #eee dashed;
+  /* padding: 6rpx 30rpx; */
+  font-size: 22rpx;
+  color: #999999;
+}
+
+.bottom-container .more{
+  width: 100%;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+}
+
+.bottom-container text{
+  font-size: 22rpx;
+  color: #999;
+}
+
+.l-title-class{
+  padding-left: 0rpx !important;
+  padding-right: 0rpx !important;
+}
+
+.l-body-class{
+  padding-left: 0 !important;
+}
+
+.more-detail{
+  display: flex;
+  align-items: center;
+}
+
+.more-detail l-icon{
+  margin-left: 16rpx;
+}

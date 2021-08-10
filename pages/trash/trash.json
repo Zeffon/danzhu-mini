@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "z-file-trash": "/components/file-trash-item/index"
+    }
+}

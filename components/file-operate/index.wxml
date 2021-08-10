@@ -1,0 +1,38 @@
+<l-arc-popup content-align="bottom" show="{{show}}" bind:lintap="onCancel">
+    <view class="container">
+        <text class="title">{{file.title}}</text>
+        <view class="main-container">
+            <view wx:if="{{online}}">
+                <view wx:if="{{!file.online}}" class="content" bind:tap="onSetOnline">
+                    <image src="/imgs/data/file/public.png"></image>
+                    <text>设置公开</text>
+                </view>
+                <view wx:else class="content" bind:tap="onSetOnline">
+                    <image src="/imgs/data/file/private.png"></image>
+                    <text>设置私有</text>
+                </view>
+            </view>
+
+            <view class="content" bind:tap="onDownloadFile">
+                <image src="/imgs/data/file/download.png"></image>
+                <text>下载</text>
+            </view>
+            <view class="content" bind:tap="onDeleteFile">
+                <image src="/imgs/data/file/trash.png"></image>
+                <text>删除</text>
+            </view>
+        </view>
+        <view class="cancel" bind:tap="onCancel">取消</view>
+    </view>
+</l-arc-popup>
+
+<z-uploading show="{{showDownloading}}" percent="{{percent}}" isUploading="{{false}}"></z-uploading>
+
+<l-dialog content-color="#333333"
+          confirm-color="#09AAFF"
+          title-color="#09AAFF"
+          bind:linconfirm="onImageDialogConfirm"
+          show="{{showImageDialog}}"
+          content="请先授权保存图片到你的相册"
+          title="授权">
+</l-dialog>

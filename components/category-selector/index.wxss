@@ -1,0 +1,22 @@
+/* components/category-selector/index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  margin-left: 20rpx;
+}
+
+.category view {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.danzhu {
+  font-family: danzhu !important;
+  font-size: 48rpx;
+  font-style: normal;
+  color: #1296db !important;
+}

@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "z-file-icon": "/components/file-icon/index"
+    }
+}

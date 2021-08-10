@@ -1,0 +1,25 @@
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="str"></wxs>
+
+<view class="container">
+
+    <image src="{{user.wx_info.avatarUrl}}" class="img"></image>
+
+    <view class="info-container">
+        <view class="code">
+            <text>{{user.code}}</text>
+            <z-copy-button value="{{user.code}}"></z-copy-button>
+        </view>
+        <view class="name" wx:if="{{user.name != null}}">姓名：{{user.name}}</view>
+        <view class="name">
+            昵称：{{user.wx_info.nickName.length >= 20 ? str.substring(user.wx_info.nickName,0,20)+'...' : user.wx_info.nickName}}
+        </view>
+        <view class="file-container">
+            <view>分享 <text class="file-count">{{user.file_count}}</text> 个文件</view>
+            <view class="file-btn">
+                <l-button bindlintap="onShareFiles" bg-color="#09AAFF" special>
+                    <text class="file-text">查看</text>
+                </l-button>
+            </view>
+        </view>
+    </view>
+</view>

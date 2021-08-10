@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "z-group-user-apply": "/components/group-user-apply/index"
+  }
+}

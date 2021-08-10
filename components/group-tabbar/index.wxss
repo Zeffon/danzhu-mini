@@ -1,0 +1,102 @@
+.container {
+  height: 100rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f7f7;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.settlement-btn {
+  width: 200rpx;
+  height: 100rpx;
+  background-color: #F4516C;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+
+.settlement-btn>text {
+  max-width: 190rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.disabled{
+  opacity: 0.5;
+}
+
+.btn-font {
+  color: #ffffff;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200rpx;
+  height: 100rpx;
+  background-color: #999999;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 208rpx;
+  flex: 1;
+}
+
+.all-text {
+  font-size: 28rpx;
+  color: #333333;
+  margin-right: 20rpx;
+}
+
+.icons {
+  box-sizing: border-box;
+  padding-left: 16rpx;
+  padding-right: 22rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 200rpx;
+  height: 100%;
+  color: #333333;
+}
+
+.icons>view {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons text {
+  font-size: 24rpx;
+}
+
+.share-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #09AAFF;
+  height: 46rpx;
+  width: 110rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  margin-right: 20rpx;
+}
+
+.share-btn text {
+  font-size: 28rpx;
+  color: #ffffff;
+}

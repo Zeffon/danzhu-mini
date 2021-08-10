@@ -1,0 +1,54 @@
+<l-arc-popup content-align="bottom" show="{{show}}" bind:lintap="onCancel">
+    <view class="container">
+        <view class="content" wx:if="{{isCreate}}">
+            <text class="tip">私密链接分享</text>
+            <view class="period-container">
+                <text class="period-title">有效期：</text>
+                <l-radio-group current="{{status}}" none-checked="{{false}}" bind:linchange="onChangeStatus"
+                    placement="row" class="radio-group">
+                    <l-radio l-class="radio" key="0" select-color="#09AAFF">永久有效</l-radio>
+                    <l-radio l-class="radio" key="7" select-color="#09AAFF">7天</l-radio>
+                    <l-radio l-class="radio" key="1" select-color="#09AAFF">1天</l-radio>
+                </l-radio-group>
+            </view>
+            <view class="code-container">
+                <text class="code-title">提取码：</text>
+                <l-radio-group current="{{codeStatus}}" none-checked="{{false}}" bind:linchange="onChangeStatus2"
+                    placement="row" class="radio-group">
+                    <l-radio l-class="radio" key="0" select-color="#09AAFF">随机</l-radio>
+                    <l-radio l-class="radio" key="1" select-color="#09AAFF">自定义</l-radio>
+                </l-radio-group>
+                <view wx:if="{{codeStatus == 1}}">
+                    <l-input width="180" maxlength="4" label-width="-200" showRow="{{false}}" 
+                    l-class="l-input" l-label-class="l-label" placeholder="4位数字或字母"
+                    bind:lininput="onInput"></l-input>
+                </view>
+
+            </view>
+            <view class="create-btn" bind:tap="onCreateLink">
+                创建链接
+            </view>
+        </view>
+        <view wx:else class="content">
+            <view class="success-header">
+                <image class="success-img" src="/imgs/data/selected.png"></image>
+                <view class="success-tip">
+                    <text>分享链接及提取码已复制</text>
+                    <text>通过QQ、微信等分享给好友吧！</text>
+                </view>
+            </view>
+            <view class="link-content">
+                <view>链接：{{link.url}}</view>
+                <view>提取码：{{link.password}}</view>
+            </view>
+
+            <view class="copy-btn" bind:tap="onCopyLink">
+                复制链接及提取码
+            </view>
+
+            <text class="period-time">本链接有效期至{{end_time}}</text>
+        </view>
+
+        <view class="cancel" bind:tap="onCancel">取消</view>
+    </view>
+</l-arc-popup>

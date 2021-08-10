@@ -1,0 +1,58 @@
+<wxs module="s" src="../../wxs/status.wxs"></wxs>
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="str"></wxs>
+
+<view class="container">
+	<view class="header-container">
+		<text>{{_group.title.length >= 20 ? str.substring(_group.title,0,20)+'...' : _group.title}}</text>
+		<text style="color:{{s.statusStyle2(_group.status).color}}">{{s.statusStyle2(_group.status).name}}</text>
+	</view>
+	<view class="main-container">
+		<view class="counter">
+			<text>用户组编号：{{_group.code}}</text>
+			<z-copy-button value="{{_group.code}}" hover-class="rect-hover" hover-stay-time="300"></z-copy-button>
+		</view>
+		<view class="counter">
+			<text>{{_group.createTime}}</text>
+			<view>{{_group.user_number}}人</view>
+		</view>
+	</view>
+
+	<view class="bottom-container">
+		<l-collapse>
+			<l-collapse-item l-body-class="l-body-class" l-title-class="l-summary-class" customTitle="{{true}}">
+				<!--自定义标题-->
+				<view class="summary" slot="title">
+					<view class="summary-detail-container">用户组简介
+						<l-icon name="down" size="16" color="#999" />
+					</view>
+					<l-button wx:if="{{type != 1}}" catch:tap="onGotoDetail" data-id="{{_group.id}}" l-class height="46" size="mini" shape="semicircle" bg-color="#A4E1C1" icon-color="#fff">
+						查看详情
+					</l-button>
+					<l-button wx:if="{{type == 3}}" data-gid="{{_group.id}}" catch:tap="onGotoApply" l-class="edit-button-color" height="46"
+						size="mini" shape="semicircle" bg-color="#09AAFF">
+						查看申请人员
+					</l-button>
+					<l-button wx:elif="{{type == 2}}" data-id="{{_group.id}}" bind:lintap="onQuitGroup" l-class height="46"
+						size="mini" shape="semicircle" type="error">
+						退出用户组
+						</l-button>
+					<l-button wx:else data-id="{{_group.id}}" bind:lintap="onJoinGroup" height="46" size="mini"
+						shape="semicircle" type="success" l-class="{{_group.status===2?'disabled':''}}">
+						加入用户组
+					</l-button>
+				</view>
+				<text>{{_group.summary == "" ? "暂无" : _group.summary}}</text>
+			</l-collapse-item>
+		</l-collapse>
+	</view>
+</view>
+
+<l-dialog></l-dialog>
+<l-toast></l-toast>
+
+<!-- 带有填写备注信息的模态框 -->
+<!-- <l-dialog l-title-class="dialog-title" show="{{showAddDialog}}" type="confirm" bind:linconfirm="onConfirmCode" title="请填写用户组内的备注信息">
+	<block wx:for="{{_group.remark}}" wx:key="index">
+		<l-input label="{{item.key}}" placeholder="请输入..." data-index="{{index}}" bind:lininput="onInputValue" showRow="{{false}}"></l-input>
+	</block>
+</l-dialog> -->

@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="image-container">
+        <image wx:if="{{item.category == 1}}" class="img" lazy-load="{{true}}" src="{{item.url}}"></image>
+        <z-file-icon wx:else title="{{item.title}}"></z-file-icon>
+    </view>
+    <view class="main-container">
+        <view class="filename">{{item.title}}</view>
+        <view class="right-bottom">
+            距离彻底粉碎时间：
+            <view class="countdown">
+                <l-countdown time="{{period}}" time-type="second" format="{%d}天{%h}:{%m}:{%s}"
+                     l-class="countdown-text" l-class-time="countdown-blue">
+                </l-countdown>
+            </view>
+        </view>
+    </view>
+    <view bind:tap="onEllipsis">
+        <l-icon name='ellipsis' size="36" color="#999"></l-icon>
+    </view>
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "z-tabbar-realm": "/components/group-tabbar-realm/index",
+    "z-checkbox": "/components/checkbox/index"
+  }
+}

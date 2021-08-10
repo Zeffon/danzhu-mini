@@ -1,0 +1,10 @@
+<l-index-list scroll-top="{{scrollTop}}" l-selected-class="l-selected-class" l-tip-class="l-tip-class"
+    style="width:100%" show-sidebar="{{false}}" is-stick="{{true}}" l-sidebar-class="sidebar-class"
+    l-tip-text-class="l-tip-text-class" bind:linselected="onSelected">
+    <block wx:for="{{months}}" wx:key="index" wx:for-item="month">
+        <l-index-anchor class="anchor">{{month}}</l-index-anchor>
+        <block wx:for="{{items[month]}}" wx:key="index" wx:for-item="file">
+            <z-file-item2 item="{{file}}"></z-file-item2>
+        </block>
+    </block>
+</l-index-list>

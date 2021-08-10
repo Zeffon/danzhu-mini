@@ -1,0 +1,142 @@
+/* pages/collect-create/collect-create.wxss */
+@import "../../wxss/danzhu.wxss";
+
+page {
+  background-color: #f7f7f7 !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #212121;
+  font-size: 28rpx;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.input-while {
+  background-color: #ffffff !important;
+}
+
+.textarea {
+  margin: 30rpx 0;
+}
+
+.text-require {
+  color: #e23;
+  vertical-align: middle;
+  margin-left: 24rpx;
+  margin-right: 6rpx;
+}
+
+.verify-title {
+  margin-right: 20rpx;
+}
+
+.radio {
+  margin-left: 20rpx;
+  font-size: 28rpx !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-title {
+  letter-spacing: 10rpx; /* 设置字与字间距 */
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+
+.content-title2 {
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+  color: #444444;
+}
+
+.text-tip {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* margin-top: 20rpx; */
+  /* margin-left: 20rpx; */
+  padding: 20rpx;
+}
+
+.tip {
+  color: #9e9e9e;
+  font-size: 20rpx;
+}
+
+.tip2 {
+  color: #333333;
+  font-size: 24rpx;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.counter-container z-counter {
+  margin-right: 20rpx;
+}
+
+.counter-container picker {
+  margin-right: 20rpx;
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select-group z-group-select {
+ margin-top: 10rpx;
+}
+
+.no-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.no-group l-button{
+  margin: 20rpx 0;
+}
+
+.create-group-btn {
+  background-color: #34bfa3 !important;
+  border-radius: 2rpx !important;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 30rpx;
+  position: fixed;
+}
+
+.create-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #09AAFF;
+  color: #ffffff;
+  height: 100rpx;
+  width: 660rpx;
+  border-radius: 180rpx;
+}

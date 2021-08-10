@@ -1,0 +1,16 @@
+<l-arc-popup content-align="bottom" show="{{show}}" bind:lintap="onCancel">
+    <view class="container">
+        <text class="tip">严禁上传、传播违法信息，已经发现严格依法处理</text>
+        <view class="main-container">
+            <view class="content" bind:tap="onSelectImage">
+                <image src="/imgs/data/image.png"></image>
+                <text>本地照片</text>
+            </view>
+            <view class="content" bind:tap="onSelectFile">
+                <image src="/imgs/data/wechat.png"></image>
+                <text>微信文件</text>
+            </view>
+        </view>
+        <view class="cancel" bind:tap="onCancel">取消</view>
+    </view>
+</l-arc-popup>

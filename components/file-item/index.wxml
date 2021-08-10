@@ -1,0 +1,22 @@
+<wxs module="s" src="../../wxs/file-status.wxs"></wxs>
+
+<view class="container">
+    <view wx:if="{{item.category == 1}}" class="image-container" bind:tap="onPreviewImage">
+        <image class="img" lazy-load="{{true}}" src="{{item.url}}"></image>
+    </view>
+    <view wx:else class="image-container" bind:tap="onPreviewFile">
+        <z-file-icon title="{{item.title}}"></z-file-icon>
+    </view>
+
+    <view class="main-container">
+        <view class="filename">{{item.title}}</view>
+        <view class="right-bottom">
+            <text class="time">{{create_time}}</text>
+            <text class="file-size">{{size}}</text>
+            <text style="color:{{s.statusStyle(item.online).color}}">{{s.statusStyle(item.online).name}}</text>
+        </view>
+    </view>
+    <view wx:if="{{isEllipsis}}" bind:tap="onEllipsis">
+        <l-icon name='ellipsis' size="36" color="#999"></l-icon>
+    </view>
+</view>

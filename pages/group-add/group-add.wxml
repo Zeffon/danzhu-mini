@@ -1,0 +1,23 @@
+<view class="container" wx:if="{{hasAuthorized}}">
+    <image src="/imgs/cover/group-add-1.jpg" class="img"></image>
+    <view class="main-container">
+        <view class="title">{{group.title}}</view>
+        <view class="hr"></view>
+        <view class="summary">{{group.summary}}</view>
+    </view>
+    <view class="btn-container">
+        <l-button special bind:lintap="onJoinGroup">
+            <view class="join-btn" hover-class="rect-hover" hover-stay-time="300">
+                <l-icon name="add-us" size="40" color="#ffffff" l-class="danzhu"></l-icon>
+                <text class="sign-text">加入用户组</text>
+            </view>
+        </l-button>
+    </view>
+</view>
+
+<z-authorization wx:else bind:login="onLogin"></z-authorization>
+
+<l-toast></l-toast>
+<l-dialog content-color="#333333" confirm-color="#09AAFF" title-color="#09AAFF" bind:linconfirm="onDialogConfirm"
+    show="{{showDialog}}" content="请先授权登陆我们的小程序" title="授权登陆" type="confirm">
+</l-dialog>

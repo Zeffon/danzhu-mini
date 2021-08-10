@@ -1,0 +1,11 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "z-group-header": "/components/group-header/index",
+    "z-group-user": "/components/group-user/index",
+    "z-group-realm": "/components/group-realm/index",
+    "z-tabbar": "/components/group-tabbar/index",
+    "z-user-check": "/components/user-check/index"
+  }
+}

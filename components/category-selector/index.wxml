@@ -1,0 +1,18 @@
+<view class="container">
+  <block wx:for="{{categorys}}" wx:key="index">
+    <view class="category">
+      <view wx:if="{{item===1}}" bindtap="onClickCategory" data-category="{{item}}">
+        <l-icon size="50" name="file-category" l-class="danzhu"></l-icon>
+        <text>选择微信对话文件上传</text>
+      </view>
+      <view wx:if="{{item===2}}" bindtap="onClickCategory" data-category="{{item}}">
+        <l-icon size="50" name="image-category" l-class="danzhu"></l-icon>
+        <text>选择图片上传</text>
+      </view>
+      <view wx:if="{{item===3}}" bindtap="onClickCategory" data-category="{{item}}">
+        <l-icon size="50" name="video-category" l-class="danzhu"></l-icon>
+        <text>选择视频上传</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,40 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #212121;
+    font-size: 28rpx;
+    background-color: #fff;
+    height: 110rpx;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+}
+
+.image-container {
+    margin-right: 20rpx;
+}
+
+.img {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 10rpx;
+}
+
+.main-container {
+    flex: 1;
+}
+
+.right-bottom {
+    color: #9e9e9e;
+    font-size: 22rpx;
+    margin-top: 8rpx;
+}
+
+.time {
+    margin-right: 50rpx;
+}
+
+.file-size {
+    margin-right: 50rpx;
+}

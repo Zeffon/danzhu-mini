@@ -1,0 +1,16 @@
+/* pages/group-detail/group-detail.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-container {
+  margin-top: 20rpx;
+}
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+}

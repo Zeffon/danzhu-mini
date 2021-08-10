@@ -1,0 +1,16 @@
+@import "../../wxss/help-demo.wxss";
+/* .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50rpx 0;
+    font-size: 30rpx;
+    font-weight: 900;
+    color: #000000;
+} */

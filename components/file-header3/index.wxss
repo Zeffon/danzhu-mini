@@ -1,0 +1,52 @@
+
+.header-container {
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 120rpx;
+    padding: 20rpx;
+    color: #212121;
+    font-size: 28rpx;
+}
+
+.avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nickname {
+    color: #000000;
+    font-weight: 600;
+    font-size: 28rpx;
+}
+
+.nickname text {
+    font-weight: 100;
+}
+
+.header-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 600rpx;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8rpx;
+}
+
+.count {
+    color: #929292;
+    font-size: 26rpx;
+}
+
+.count text {
+    color: #000000;
+    font-weight: 600;
+}

@@ -1,0 +1,61 @@
+<view>
+
+    <view wx:if="{{showCheck}}" class="container">
+        <view data-is-click="{{totalUserCount}}" bind:tap="onBatchDeleteUser"
+            class="settlement-btn {{totalUserCount===0?'disabled':''}}">
+            <text>删除 ( {{totalUserCount}} )</text>
+        </view>
+        <view bind:tap="onCancelCheck" class="cancel btn-font">
+            <text>取消</text>
+        </view>
+
+        <view class="checkbox-container">
+            <text class="all-text">全选</text>
+            <z-checkbox bind:check="onCheckAll" checked="{{allChecked}}"></z-checkbox>
+        </view>
+    </view>
+    <view wx:else class="container">
+        <view class="icons">
+            <view wx:if="{{isAdmin}}" bind:tap="onAddUser">
+                <l-icon size="38" name="add" color="#333333"></l-icon>
+                <text>添加</text>
+            </view>
+            <view wx:else bind:tap="onQuitGroup">
+                <l-icon size="38" name="error" color="#333333"></l-icon>
+                <text>退出</text>
+            </view>
+        </view>
+
+        <view class="icons" wx:if="{{isAdmin}}">
+            <view bind:tap="onCheckUser">
+                <l-icon size="36" name="checked" color="#333333"></l-icon>
+            <text>选择</text>
+            </view>
+        </view>
+
+        <view class="icons">
+            <view bind:tap="onUpdateRemark">
+                <l-icon size="38" name="edit" color="#333333"></l-icon>
+                <text>编辑</text>
+            </view>
+        </view>
+
+
+        <view data-gid="{{group.id}}" bind:tap="onShare">
+            <l-button special>
+                <view class="share-btn" hover-class="rect-hover" hover-stay-time="300">
+                    <l-icon name="comment" size="26" color="#ffffff"></l-icon>
+                    <text>邀请</text>
+                </view>
+            </l-button>
+        </view>
+    </view>
+
+</view>
+
+<l-popup content-align="bottom" show="{{showBtnRealm}}" bind:lintap="onClosePopup">
+    <z-tabbar-realm group="{{group}}" cur-user="{{curUser}}" isAdd="{{isAdd}}" isBtnEdit="{{isBtnEdit}}">
+    </z-tabbar-realm>
+</l-popup>
+
+<l-toast></l-toast>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "z-my-banner": "/components/my-banner/index",
+    "z-my-apply-panel": "/components/my-apply-panel/index"
+  }
+}

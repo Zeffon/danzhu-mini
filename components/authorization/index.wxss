@@ -1,0 +1,35 @@
+/*引入公共样式*/
+@import "../../wxss/danzhu.wxss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 400rpx;
+}
+
+.sign-btn {
+    margin-top: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #3BAA33;
+    color: #ffffff;
+    height: 80rpx;
+    width: 450rpx;
+    padding: 10rpx 20rpx;
+    border-radius: 100rpx;
+}
+
+.danzhu {
+    font-family: danzhu !important;
+    font-size: 48rpx;
+    font-style: normal;
+    color: #ffffff !important;
+}
+
+.sign-text {
+    margin-left: 20rpx;
+}

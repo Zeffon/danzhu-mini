@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "z-collect-item": "/components/collect-item/index",
+    "z-file-item2": "/components/file-item2/index"
+  }
+}

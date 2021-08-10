@@ -1,0 +1,18 @@
+<view class="header-container">
+    <image class="avatar" src="{{detail.avatar}}" bind:tap="onGotoFileShare"></image>
+    <view class="info-container">
+        <text class="nickname" wx:if="{{isAdmin}}"> <text>{{detail.nickName}}</text> 的分享</text>
+        <text class="nickname" wx:else>收集人：<text>{{detail.nickName}}</text></text>
+        <view class="header-bottom">
+            <view class="count">共分享 <text>{{detail.files.length}}</text> 个文件</view>
+            <l-button wx:if="{{!stopUpload}}" bindlintap="onClick" bg-color="#e2f4ff" l-class="upload" width="130"
+                height="40" size="mini">
+                <text wx:if="{{isAdmin}}">帮他上传</text>
+                <text wx:else>再次发送</text>
+            </l-button>
+            <l-button wx:else bg-color="#fafafa" l-class="stop-upload" width="130" height="40" size="mini">
+                <text>停止收集</text>
+            </l-button>
+        </view>
+    </view>
+</view>

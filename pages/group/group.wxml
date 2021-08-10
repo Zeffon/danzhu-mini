@@ -1,0 +1,37 @@
+<view class="container" style="height:100rpx;">
+	<l-tabs l-header-class="swipeable-header" l-inactive-class="swipeable-inactive-class"
+		l-line-class="line-class" l-active-class="swipeable-active-class" active-key="{{activeKey}}" swipeable
+		has-line="{{true}}" animated-for-line="{{true}}" active-color="#09AAFF" bind:linchange="onTabpanelChange">
+
+		<l-tabpanel tab="我创建的" key="create" slot="create"></l-tabpanel>
+		<l-tabpanel tab="我加入的" key="join" slot="join"></l-tabpanel>
+	</l-tabs>
+</view>
+
+<l-loadmore wx:if="{{activeKey == 'create'}}" show="{{bottomLoading1}}" type="{{loadingType1}}" loading-text="努力加载中..." end-text="别拉了，我也是有底线的T_T">
+	<view slot="content">
+		<view wx:if="{{isEmpty1}}">
+			<z-empty bind:btntap="onGotoAdd" show-btn show text="当前我创建的用户组空空如也" btn-text="去添加"></z-empty>
+		</view>
+		<view wx:else>
+			<block wx:for="{{createList}}" wx:key="index">
+				<z-group class="group" group="{{item}}" type="3"></z-group>
+			</block>
+		</view>
+	</view>
+</l-loadmore>
+<l-loadmore wx:else show="{{bottomLoading2}}" type="{{loadingType2}}" loading-text="努力加载中..." end-text="别拉了，我也是有底线的T_T">
+	<view slot="content">
+		<view wx:if="{{isEmpty2}}">
+			<z-empty bind:btntap="onGotoSearch" show-btn show text="当前我加入的用户组空空如也-_-!" btn-text="去搜索加入"></z-empty>
+		</view>
+		<view wx:else>
+			<block wx:for="{{joinList}}" wx:key="index">
+				<z-group bind:userquit="onQuitGroup" class="group" group="{{item}}" type="2" isSearch="{{false}}"></z-group>
+			</block>
+		</view>
+	</view>
+</l-loadmore>
+
+<l-dialog show="{{deleteDialog}}" data-gid="{{deleteId}}" title="是否确认要退出该用户组？" type="confirm"
+	bind:linconfirm="onConfirmDelete"></l-dialog>

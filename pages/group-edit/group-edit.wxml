@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="main-container">
+    <view class="title">
+      <text>修改用户组的基本信息</text>
+      <view class="hr"></view>
+    </view>
+
+    <l-input label-width="150" bind:lininput="onInputTitle" bind:linclear="onClear" tip-type="toast" label="名称:"
+      clear="{{true}}" width="750" placeholder="请输入用户组的名称" value="{{group.title}}" required="{{true}}"
+      rules="{{titleRule}}">
+    </l-input>
+
+    <view class="verify">
+      <text class="text-require">*</text>
+      <text class="verify-title">加入:</text>
+      <l-radio-group current="{{status}}" none-checked="{{false}}" bind:linchange="onChangeStatus"
+        placement="row">
+        <l-radio l-class="radio" key="0" select-color="#09AAFF">无需验证</l-radio>
+        <l-radio l-class="radio" key="1" select-color="#09AAFF">需要验证</l-radio>
+        <l-radio l-class="radio" key="2" select-color="#09AAFF">不可加入</l-radio>
+      </l-radio-group>
+    </view>
+
+    <text class="summary">简介:</text>
+    <l-textarea value="{{group.summary}}" maxlength="64" placeholder="可以简单介绍该用户组..." bind:lininput="onInputSummary">
+    </l-textarea>
+
+    <view class="remark-container">
+      tip : 用户组的备注信息无法进行修改
+    </view>
+  </view>
+  <view class="bottom-container">
+    <view bind:tap="onReturn" class="cancel btn-font">
+      <text>返回</text>
+    </view>
+    <view bind:tap="onDisBand" class="disband btn-font">
+      <text>解散</text>
+    </view>
+    <view bind:tap="onUpdate" class="update btn-font">
+      <text>确认修改</text>
+    </view>
+  </view>
+</view>
+
+<l-toast></l-toast>
+<l-dialog l-title-class="dialog-title" show="{{showDialog}}" type="confirm" bind:linconfirm="onConfirmCode" title="请输入 {{group.code}} 确认要解散该用户组">
+  <l-input label-width="100" placeholder="请输入用户组的编号" bind:lininput="onInputCode" showRow="{{false}}"></l-input>
+</l-dialog>

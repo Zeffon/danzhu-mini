@@ -1,0 +1,20 @@
+<view class="container">
+    <image src="{{src}}" class="img"></image>
+    <view class="main-container">
+        <view class="title">{{data.title}}</view>
+        <view class="hr"></view>
+        <view class="summary">{{data.summary}}</view>
+    </view>
+    <view class="time-container" wx:if="{{data.end_time}}">
+        本链接有效期至 {{data.end_time}}
+    </view>
+    <view class="tip">
+        二维码已保存到手机，赶快分享到朋友圈吧！
+    </view>
+</view>
+
+<l-toast></l-toast>
+<l-loading></l-loading>
+
+<l-dialog></l-dialog>
+

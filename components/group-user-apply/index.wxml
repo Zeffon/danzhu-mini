@@ -1,0 +1,33 @@
+<wxs module="s" src="../../wxs/apply-status.wxs"></wxs>
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="str"></wxs>
+
+<view class="container">
+  <view class="user-container">
+    <image class="avatar" src="{{user.wx_info.avatarUrl}}"></image>
+    <view class="main-container">
+      <view class="info">
+        <z-copy-button value="{{user.code}}" text="{{user.code}}" color="#09AAFF" btn="{{false}}"></z-copy-button>
+        <view class="nickname-status">
+          <view class="nickname">
+            {{user.wx_info.nickName.length >= 10 ? str.substring(user.wx_info.nickName,0,10)+'...' : user.wx_info.nickName}}
+          </view>
+          <view class="status" style="color:{{s.statusStyle(user.status).color}}">{{s.statusStyle(user.status).name}}
+          </view>
+        </view>
+
+      </view>
+      <view class="time">
+        <text>申请时间: {{user.create_time}}</text>
+        <text wx:if="{{user.status != 0}}">已处理</text>
+        <text wx:else class="no-deal-text">未处理</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{user.status != 1}}" class="ellipsis" data-id="{{user.id}}" bind:tap="onShowActionSheet">
+    <l-icon name='ellipsis' size="36" color="#999"></l-icon>
+  </view>
+</view>
+
+<l-action-sheet open-api="{{false}}" show-cancel item-list="{{itemList}}" show="{{showActionSheet}}"
+  bind:linitemtap="onChooseStatus" bind:lincancel="lincancel">
+</l-action-sheet>

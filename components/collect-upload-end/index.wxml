@@ -1,0 +1,4 @@
+<view class="container">
+    <image class="image" src="/imgs/data/warning.png"></image>
+    <text>该文件收集任务已结束</text>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "z-ec-bar": "/components/ec-bar/index",
+    "z-ec-gauge": "/components/ec-gauge/index",
+    "z-ec-line": "/components/ec-line/index",
+    "z-ec-pie": "/components/ec-pie/index"
+  }
+}

@@ -1,0 +1,22 @@
+<view class="container">
+    <view class="main-container">
+        <view class="content" data-category="1" bind:tap="onStatisticsDetail">
+            <image src="/imgs/echarts/bar.png"></image>
+            <text>用户提交情况</text>
+        </view>
+        <view class="content" data-category="2" bind:tap="onStatisticsDetail">
+            <image src="/imgs/echarts/gauge.png"></image>
+            <text>用户组收集进度</text>
+        </view>
+    </view>
+    <view class="main-container">
+        <view class="content" data-category="3" bind:tap="onStatisticsDetail">
+            <image src="/imgs/echarts/line.png"></image>
+            <text>提交时间统计</text>
+        </view>
+        <view class="content" data-category="4" bind:tap="onStatisticsDetail">
+            <image src="/imgs/echarts/pie.png"></image>
+            <text>提交数量对比</text>
+        </view>
+    </view>
+</view>

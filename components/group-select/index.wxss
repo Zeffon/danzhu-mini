@@ -1,0 +1,38 @@
+/* components/group-select/index.wxss */
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 600rpx;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  height: 200rpx;
+  width: 560rpx;
+  padding: 10rpx 20rpx;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 6rpx 0;
+}
+
+.title-text {
+  color: #212121;
+  font-size: 22rpx;
+}

@@ -1,0 +1,20 @@
+<wxs module="s" src="../../wxs/apply-status.wxs" xmlns:wx=""></wxs>
+
+<view class="container">
+    <view class="header">
+        <text>{{item.title}}</text>
+        <text style="color:{{s.statusStyle(item.status).color}}">{{s.statusStyle(item.status).name}}</text>
+    </view>
+    <view class="main">
+        <text>审核者:</text>
+        <view class="info">
+            <image mode="aspectFit" src="{{item.wx_info.avatarUrl}}" class="img"></image>
+            <text class="nickName hidden-text">{{item.wx_info.nickName}}</text>
+        </view>
+    </view>
+    <view class="time-container">
+        <text style="margin-right:20rpx">申请时间: {{create_time}}</text>
+    </view>
+</view>
+
+<l-loading></l-loading>

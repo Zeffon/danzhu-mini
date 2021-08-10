@@ -1,0 +1,18 @@
+<view class="container">
+    <image src="/imgs/data/success.png" class="image"></image>
+    <view class="tip-title">文件提交成功</view>
+    <view class="tip">
+        <text class="tip1">文件已经提交至</text>
+        <text>{{collect.title}}</text>
+    </view>
+
+    <view class="btn-container">
+        <l-button special bind:lintap="onAgainUpload">
+            <view class="again-select" hover-class="rect-hover" hover-stay-time="300">
+                继续添加文件
+            </view>
+        </l-button>
+        <view class="sent-file" bind:tap="onGotoCollect">管理已发送文件</view>
+    </view>
+
+</view>

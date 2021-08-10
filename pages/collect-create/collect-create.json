@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "z-counter": "/components/counter/index",
+    "z-counter2": "/components/counter2/index",
+    "z-switch": "/components/switch/index",
+    "z-group-select": "/components/group-select/index"
+  }
+}

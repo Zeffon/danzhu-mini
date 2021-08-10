@@ -1,0 +1,23 @@
+/* pages/collect-statistics/collect-statistics.wxss */
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100rpx 0;
+    color: #212121;
+    font-size: 30rpx;
+}
+
+.content image {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 30rpx 0;
+}

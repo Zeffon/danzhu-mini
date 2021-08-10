@@ -1,0 +1,28 @@
+/* pages/file-upload/file-upload.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx;
+}
+
+.popup-loading {
+    background-color: #ffffff;
+    height: 300rpx;
+    width: 400rpx;
+    box-sizing: border-box;
+    color: #212121;
+    font-size: 28rpx;
+    display: flex;
+    padding: 30rpx;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-loading l-circle {
+    margin-top: 30rpx;
+}

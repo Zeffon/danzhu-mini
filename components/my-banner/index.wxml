@@ -1,0 +1,38 @@
+<view class="container">
+    <view class="inner-container">
+
+        <l-button special wx:if="{{showLoginBtn}}" open-type="getUserInfo" class="avatar-position"
+            bind:getuserinfo="onUpdateUserInfo">
+            <image class="no-login" src="/imgs/my/noLogin.png"></image>
+        </l-button>
+        <view wx:else class="info-container">
+            <l-avatar size="140" class="avatar-container" l-class="avatar" shape="square"
+                      open-data="{{['userAvatarUrl','userNickName']}}">
+            </l-avatar>
+            <view class="code" wx:if="{{code != ''}}">
+                <text class="code-text">{{code}}</text>
+                <z-copy-button value="{{code}}" hover-class="rect-hover" hover-stay-time="300">
+                </z-copy-button>
+            </view>
+        </view>
+
+
+        <l-button wx:if="{{showLoginBtn}}" l-class="auth-btn" bg-color="#DCEBE6" open-type="getUserInfo"
+            bind:getuserinfo="onUpdateUserInfo" height="48" width="120">
+            登 陆
+        </l-button>
+        <view class="row-bottom">
+            <view class="bottom-container">
+                <view bind:tap="onGotoMyFile" class="left">
+                    <text>{{fileCount}}</text>
+                    <text>我的文件</text>
+                </view>
+                <view class="v-line"></view>
+                <view bind:tap="onGotoTrash" class="right">
+                    <text>{{trashCount}}</text>
+                    <text>废纸篓</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

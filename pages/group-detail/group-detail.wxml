@@ -1,0 +1,37 @@
+<scroll-view style="height:{{h}}rpx;" scroll-y bindscrolltolower='onScrollTolower'>
+  <view class="container">
+    <z-group-header group="{{group}}"></z-group-header>
+    <view class="user-container" wx:if="{{!isEmpty}}">
+      <l-loadmore show="{{bottomLoading}}" type="{{loadingType}}" loading-text="努力加载中..." end-text="—— 我也是有底线的 ——">
+        <view slot="content">
+          <block wx:for="{{users}}" wx:key="index">
+            <z-group-user isEllipsis="{{!showCheck}}" showCheck="{{showCheck}}" user="{{item}}"
+                          bind:checkitem="onCheckItem" bind:ellipsistap="onEllipsis">
+            </z-group-user>
+          </block>
+        </view>
+      </l-loadmore>
+    </view>
+    <view wx:else>
+      <z-empty show text="哦嚯，一个人都没有，真冷清呐-_-"></z-empty>
+    </view>
+  </view>
+</scroll-view>
+
+<l-popup content-align="bottom" show="{{showRealm}}" bind:lintap="onClosePopup">
+  <z-group-realm user="{{user}}" isEdit="{{isEdit}}" isAdmin="{{isAdmin}}" bind:deletetap="onDeleteUser"
+    bind:realmtap="onShowRealm" bind:edittap="onShowEdit" bind:submittap="onUpdateRemark">
+  </z-group-realm>
+</l-popup>
+
+<z-tabbar class="tabbar" group="{{group}}" cur-user="{{curUser}}" isAdmin="{{isAdmin}}" isAdd="{{isAdd}}"
+          isBtnEdit="{{isBtnEdit}}" showBtnRealm="{{showBtnRealm}}" showCheck="{{showCheck}}" 
+          allChecked="{{allChecked}}" totalUserCount="{{totalUserCount}}"
+          bind:realmtap="onShowBtnRealm" bind:newtap="onAddClick"
+          bind:edittap="onShowBtnEdit" bind:submittap="onUserUpdateRemark" 
+          bind:checktap="onShowCheck" bind:allcheck="onAllChecked"
+          bind:batchdelete="onBatchDelete" bind:addtap="onAdminAddUser">
+</z-tabbar>
+
+<l-toast></l-toast>
+<l-dialog></l-dialog>

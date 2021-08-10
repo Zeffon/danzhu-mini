@@ -1,0 +1,53 @@
+<!--pages/test/test.wxml-->
+<l-button l-class="btn" size="long" shape="semicircle" bind:getuserinfo="onGetUserInfo" open-type="getUserInfo">微信登陆</l-button>
+<l-button l-class="btn" size="long" bind:lintap="onVerifyToken">验证Token</l-button>
+<l-button l-class="btn" size="long" bind:lintap="onTestInterceptor">测试拦截机制</l-button>
+
+<l-button l-class="btn" size="long" bind:lintap="listJoinGroup" type="success">查看加入的用户组列表</l-button>
+<l-button l-class="btn" size="long" bind:lintap="listCreateGroup" type="success">查看创建的用户组列表</l-button>
+<l-button l-class="btn" size="long" bind:lintap="createGroup" type="success">创建用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="getGroupDetail" type="success">查看用户组详情</l-button>
+<l-button l-class="btn" size="long" bind:lintap="disbandGroup" type="success">解散用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="updateGroup" type="success">修改用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminGetDetail" type="success">管理员查看用户组详情</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminAddUser" type="success">管理员添加用户进用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminModifyUser" type="success">管理员修改用户组的用户</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminDeleteUser" type="success">管理员删除用户组的用户</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminJoinGroup" type="success">管理员加入自己的用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminQuitGroup" type="success">管理员退出自己的用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="addGroup" type="success">加入用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="quitGroup" type="success">退出用户组</l-button>
+<l-button l-class="btn" size="long" bind:lintap="userUpdateInfo" type="success">用户修改用户组里的信息</l-button>
+<l-button l-class="btn" size="long" bind:lintap="listUser" type="success">查看用户组的用户列表</l-button>
+
+
+<l-button l-class="btn" size="long" bind:lintap="listMyJoinCollect" type="warning">获取我加入的收集夹列表</l-button>
+<l-button l-class="btn" size="long" bind:lintap="listMyCreateCollect" type="warning">获取我创建的收集夹列表</l-button>
+<l-button l-class="btn" size="long" bind:lintap="createCollect" type="warning">创建收集夹</l-button>
+<l-button l-class="btn" size="long" bind:lintap="getCollectDetail" type="warning">查看收集夹详情</l-button>
+<l-button l-class="btn" size="long" bind:lintap="disbandCollect" type="warning">解散收集夹</l-button>
+<l-button l-class="btn" size="long" bind:lintap="updateCollect" type="warning">修改收集夹信息</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminAddUserInCollect" type="warning">管理员添加用户进收集夹</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminUpdateUserInCollect" type="warning">管理员修改收集夹的用户</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminDeleteUserInCollect" type="warning">管理员删除收集夹的用户</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminJoinCollect" type="warning">管理员加入自己的收集夹</l-button>
+<l-button l-class="btn" size="long" bind:lintap="adminQuitCollect" type="warning">管理员退出自己的收集夹</l-button>
+<l-button l-class="btn" size="long" bind:lintap="userJoinCollect" type="warning">用户加入收集夹</l-button>
+<l-button l-class="btn" size="long" bind:lintap="userQuitCollect" type="warning">用户退出收集夹</l-button>
+<l-button l-class="btn" size="long" bind:lintap="userUpdateCollectInfo" type="warning">用户修改收集夹的用户信息</l-button>
+<l-button l-class="btn" size="long" bind:lintap="clickChoseFileType" type="warning">用户上传文件</l-button>
+<l-button l-class="btn" size="long" bind:lintap="userUpdateFileName" type="warning">用户修改文件名</l-button>
+<l-button l-class="btn" size="long" bind:lintap="userDeleteFile" type="warning">用户删除文件</l-button>
+<l-button l-class="btn" size="long" bind:lintap="userDownloadFile" type="warning">用户下载文件</l-button>
+<l-button l-class="btn" size="long" bind:lintap="listCollectFile" type="warning">查看收集夹的文件列表</l-button>
+
+<l-popup show="{{uploadFileShow}}" content-align="bottom">
+    <view class='pupop-content'>
+      <z-category-selector categorys="{{categorys}}" bind:categorytap='onGoto'></z-category-selector>
+      <!-- <view class='popup-mask' bindtap='onToFile'>选择微信对话文件上传</view>
+      <view class='popup-mask' bindtap='onToImage'>选择图片上传</view>
+      <view class='popup-mask' bindtap='onToVideo'>选择视频上传</view> -->
+    </view>
+</l-popup>
+
+<l-button l-class="btn" size="long" bind:lintap="search" type="error">code搜索</l-button>

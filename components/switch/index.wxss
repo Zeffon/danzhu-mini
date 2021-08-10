@@ -1,0 +1,48 @@
+/* components/switch/index.wxss */
+.switch-list {
+  display: flex;
+}
+
+/* 最底层的一个椭圆区域
+  当前设置颜色为蓝色
+*/
+.fui-switch {
+  width: 87rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  background-color: #09AAFF;
+  position: relative;
+}
+
+/* 上面盖上一层白色的椭圆区域以及一个白色的按钮 */
+.fui-switch::after,
+.fui-switch::before {
+  content: "";
+  position: absolute;
+  height: 50rpx;
+  top: 0rpx;
+  left: -1rpx;
+  border-radius: 25rpx;
+  border: 1rpx solid #dfdfdf;
+  transition-duration: .3s;
+}
+
+.fui-switch:before {
+  width: 90rpx;
+  background-color: #fdfdfd;
+}
+
+/* 当用户点击打开的时候，白色椭圆会缩小至消失，反之则恢复 */
+.fui-switch.disabled:before {
+  transform: scale(0);
+}
+
+.fui-switch:after {
+  width: 48rpx;
+  background-color: #fff;
+}
+
+/* 当用户点击打开的时候，按钮会右滑 */
+.fui-switch.disabled:after {
+  transform: translateX(42rpx);
+}

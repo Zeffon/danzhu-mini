@@ -1,0 +1,108 @@
+/* pages/group-create/group-create.wxss */
+@import "../../wxss/danzhu.wxss";
+
+page {
+  background-color: #f7f7f7 !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #212121;
+  font-size: 30rpx;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.input-while {
+  background-color: #ffffff !important;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40rpx 0;
+}
+
+.text-require {
+  color: #e23;
+  vertical-align: middle;
+  margin-left: 24rpx;
+  margin-right: 6rpx;
+}
+
+.verify-title {
+  margin-right: 20rpx;
+}
+
+.radio {
+  margin-left: 20rpx;
+  font-size: 28rpx !important;
+}
+
+.remark-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.remark-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.remark-title l-icon {
+  margin-left: 20rpx;
+}
+
+.remark-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #212121;
+  font-size: 30rpx;
+}
+
+.remark-text l-input {
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+.tip {
+  color: #9e9e9e;
+  font-size: 20rpx;
+  margin: 0px 55rpx;
+  position: fixed;
+  bottom: 200rpx;
+  display: flex;
+  align-items: center;
+
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 50rpx;
+  position: fixed;
+}
+
+.create-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #09AAFF;
+  color: #ffffff;
+  height: 100rpx;
+  width: 660rpx;
+  border-radius: 180rpx;
+}

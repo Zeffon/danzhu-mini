@@ -1,0 +1,22 @@
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="str"></wxs>
+
+<view class="container">
+  <image class="avatar" src="{{user.wx_info.avatarUrl}}" bind:tap="onGotoFileShare"></image>
+  <view class="main-container">
+    <view class="info">
+      <z-copy-button value="{{user.code}}" text="{{user.code}}" color="#09AAFF" btn="{{false}}"></z-copy-button>
+      <view class="name">
+        <text>{{user.wx_info.nickName.length >= 9 ? str.substring(user.wx_info.nickName,0,9)+'...' : user.wx_info.nickName}}</text>
+      </view>
+    </view>
+    <view>
+      <text class="create-time">加入时间：{{user.create_time}}</text>
+    </view>
+  </view>
+  <view wx:if="{{isEllipsis}}" bind:tap="onEllipsis">
+    <l-icon name='ellipsis' size="36" color="#999"></l-icon>
+  </view>
+  <view wx:if="{{showCheck}}">
+    <z-checkbox data-id="{{user.id}}" bind:check="onCheckItem" checked="{{user.checked}}"></z-checkbox>
+  </view>
+</view>

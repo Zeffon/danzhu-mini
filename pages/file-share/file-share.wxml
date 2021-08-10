@@ -1,0 +1,12 @@
+<view class="container">
+    <z-file-header3 detail="{{detail}}"></z-file-header3>
+    <block wx:for="{{detail.files}}" wx:key="index">
+        <z-file-item item="{{item}}" bind:itemtap="onOpenOperate"></z-file-item>
+    </block>
+</view>
+
+<l-loading></l-loading>
+<l-toast></l-toast>
+
+<z-file-operate wx:if="{{isOwn}}" show="{{showOperate}}" online="{{true}}" file="{{file}}" bind:cancel="onCloseOperate"></z-file-operate>
+<z-file-operate2 wx:else show="{{showOperate}}" file="{{file}}" bind:cancel="onCloseOperate"></z-file-operate2>

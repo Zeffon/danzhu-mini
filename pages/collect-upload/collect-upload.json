@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "z-collect-upload": "/components/collect-upload/index",
+        "z-collect-upload2": "/components/collect-upload-finish/index",
+        "z-collect-upload3": "/components/collect-upload-end/index",
+        "z-file-category": "/components/file-category/index",
+        "z-authorization": "/components/authorization/index"
+    }
+}

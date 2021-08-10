@@ -1,0 +1,27 @@
+/* pages/test/test.wxss */
+.btn{
+  margin-bottom: 20rpx !important;
+}
+
+.pupop-content {
+  height: 300rpx;
+  width: 100%;
+  background: #fff;
+  text-align: left;
+  line-height: 80rpx;
+  color: #555;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+}
+
+.popup-mask {
+  width: 180rpx;
+  height: 72rpx;
+  border-radius: 4rpx;
+  border: 1px solid rgba(54, 131, 214, 1);
+  color: rgba(54, 131, 214, 1);
+  font-size: 28rpx;
+  margin: 100rpx auto;
+  line-height: 72rpx;
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+/* components/file/index.wxss */
+.container {
+    margin-top: 20rpx;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 680rpx;
+    box-shadow: 0px 0px 8px 0px rgba(119, 163, 149, 0.5);
+    border-radius: 8rpx;
+    padding: 20rpx;
+}
+
+.img {
+    display: flex;
+    box-shadow: 0px 0px 8px 0px rgba(119, 163, 149, 0.3);
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.main-container {
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #000000;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 460rpx;
+    font-size: 24rpx;
+    color: #666;
+}

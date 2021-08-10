@@ -1,0 +1,51 @@
+<view class="container" wx:if="{{!isCreated}}">
+  <view class="main-container">
+    <l-input label-width="0" placeholder="请输入用户组的名称" required="{{true}}" rules="{{titleRule}}" clear="{{true}}"
+             l-class="input-while" showRow="{{false}}" width="700" bind:lininput="onInputTitle" bind:linclear="onClear" tip-type="toast"></l-input>
+    <view class="status">
+      <text class="text-require">*</text>
+      <text class="verify-title">加入:</text>
+      <l-radio-group current="{{status}}" none-checked="{{false}}" bind:linchange="onChangeStatus"
+        placement="row">
+        <l-radio l-class="radio" key="0" select-color="#09AAFF">无需验证</l-radio>
+        <l-radio l-class="radio" key="1" select-color="#09AAFF">需要验证</l-radio>
+        <l-radio l-class="radio" key="2" select-color="#09AAFF">不可加入</l-radio>
+      </l-radio-group>
+    </view>
+    <view>
+      <l-textarea l-class="input-while" placeholder="为你创建用户组添加简介" maxlength="64" bind:lininput="onInputSummary"></l-textarea>
+    </view>
+
+    <view class="remark-container">
+      <view class="remark-title">
+        <text>添加用户组的备注信息</text>
+        <l-icon name="add" color="#09AAFF" size="40" bind:tap="onAddRemark"></l-icon>
+      </view>
+      <view>
+        <block wx:for="{{remark}}" wx:key="index">
+          <view class="remark-text">
+            <l-input label-width="0" width="300" required="{{true}}" rules="{{valueRule}}"  l-class="input-while"
+                     value="{{item.key}}" data-index="{{index}}" bind:lininput="onInputValue" placeholder="比如：姓名、学号">
+            </l-input>
+            <l-icon name="error" color="#F4516C" size="40" data-index="{{index}}" bind:tap="onReduceRemark"></l-icon>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <text class="tip">Tip: 设置备注信息可以帮助自己准确地确认成员，同时用于收集夹也可以更好地呈现数据</text>
+  <view class="btn-container">
+    <l-button special bind:lintap="onConfirm">
+        <view class="create-btn" hover-class="rect-hover" hover-stay-time="300">
+          确定新建用户组
+        </view>
+      </l-button>
+  </view>
+</view>
+
+<view class="success-container">
+
+</view>
+
+<l-toast></l-toast>
+<l-loading></l-loading>

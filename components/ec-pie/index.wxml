@@ -1,0 +1,3 @@
+<view class="container">
+    <z-ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></z-ec-canvas>
+</view>

@@ -1,0 +1,4 @@
+<view class="container">
+  <z-ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}"></z-ec-canvas>
+</view>
+

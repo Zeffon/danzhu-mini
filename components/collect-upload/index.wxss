@@ -1,0 +1,65 @@
+@import "../../wxss/danzhu.wxss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+    height: 560rpx;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30rpx;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #212121
+}
+
+.summary {
+    font-size: 22rpx;
+    color: #444444
+}
+
+.hr {
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    width: 640rpx;
+    height: 4rpx;
+    background-color: #E9E9E9;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 180rpx;
+    font-size: 24rpx;
+}
+
+.select-file {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #09AAFF;
+    color: #ffffff;
+    height: 60rpx;
+    width: 280rpx;
+    padding: 10rpx 10rpx;
+    border-radius: 100rpx;
+}
+
+.time-container {
+    color: #666666;
+    font-size: 20rpx;
+    display: flex;
+    position: fixed;
+    bottom: 30rpx;
+}

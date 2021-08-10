@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="content">
+        <view class="title">文件删除后，还能找回吗？</view>
+        <view>文件删除之后七天之内是可以找回的，但是超过七天之后将会被彻底删除是无法找回。找回操作如下：</view>
+    </view>
+    <view class="content">
+        <view class="title">恢复文件</view>
+        <view>文件删除之后是会被放入到废纸篓之中，请在速集侠小程序的下方【我的】 -> 【废纸篓】 之中便可查看到。我们可以看到该文件被彻底删除的倒计时时间。一旦倒计时到了，则会被彻底删除将无法找回文件。所以，我们要及时将删除的文件恢复。点击文件左边的三个点，选择恢复即可</view>
+    </view>
+    <view class="content">
+        <view class="title">彻底删除</view>
+        <view>如果这个文件确认不想要了，我们也可以手动进行彻底删除。点击文件左边的三个点，选择粉碎即可</view>
+    </view>
+</view>

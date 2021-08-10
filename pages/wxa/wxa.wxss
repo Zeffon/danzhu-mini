@@ -1,0 +1,51 @@
+/* pages/wxa/wxa.wxss */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 500rpx;
+    height: 500rpx;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30rpx;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #212121
+}
+
+.summary {
+    font-size: 22rpx;
+    color: #444444
+}
+
+.hr {
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    width: 640rpx;
+    height: 4rpx;
+    background-color: #E9E9E9;
+}
+
+.time-container {
+    color: #666666;
+    font-size: 20rpx;
+    position: fixed;
+    bottom: 400rpx;
+}
+
+.tip {
+    color: #666666;
+    font-size: 24rpx;
+    position: fixed;
+    bottom: 200rpx;
+}

@@ -1,0 +1,18 @@
+<l-slide-view height="132" width="750" slide-width="150" auto-close>
+    <view slot="left" class="left" bind:tap="onGotoUploadFile">
+        <image class="avatar" src="{{item.wx_info.avatarUrl}}"></image>
+        <view>
+            <text class="code"></text>
+            <text class="nickname">{{item.wx_info.nickName}}</text>
+            <view class="right-bottom">
+                <text class="time">{{create_time}}</text>
+                <text class="status1" wx:if="{{item.status == 1}}">非用户组已上传</text>
+                <text class="status2" wx:elif="{{item.status == 2}}">用户组未上传</text>
+                <text class="status3" wx:elif="{{item.status == 3}}">用户组已上传</text>
+            </view>
+        </view>
+    </view>
+    <view slot="right" class="right" bind:tap="onDelete">
+        <text>删除</text>
+    </view>
+</l-slide-view>

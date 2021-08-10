@@ -1,0 +1,7 @@
+<l-popup content-align="center" show="{{show}}" animation="hide" locked="{{locked}}">
+    <view class="container">
+        <text wx:if="{{isUploading}}">正在上传{{count}}个文件，请稍等...</text>
+        <text wx:else>正在下载文件，请稍等...</text>
+        <l-circle class="circle" percent='{{percent}}' active-color='#09AAFF' show-value='{{true}}' outer-diameter='120' inner-diameter='80'></l-circle>
+    </view>
+</l-popup>

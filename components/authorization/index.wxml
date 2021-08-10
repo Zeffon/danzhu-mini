@@ -1,0 +1,8 @@
+<view class="container">
+    <l-button special bind:getuserinfo="onUpdateUserInfo" open-type="getUserInfo">
+        <view class="sign-btn" hover-class="rect-hover" hover-stay-time="300">
+            <l-icon name="wechat" size="30" color="#ffffff" l-class="danzhu"></l-icon>
+            <text class="sign-text">微信登陆</text>
+        </view>
+    </l-button>
+</view>

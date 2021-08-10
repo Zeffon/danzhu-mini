@@ -1,0 +1,45 @@
+/* pages/my/my.wxss */
+
+.container {}
+
+.danzhu-help {
+    font-family: danzhu !important;
+    font-size: 30rpx !important;
+    font-style: normal;
+    color: #09AAFF !important;
+}
+
+.danzhu-file {
+    font-family: danzhu !important;
+    font-size: 34rpx !important;
+    font-style: normal;
+    color: #09AAFF !important;
+}
+
+.main-container {
+    background-color: #ffffff;
+    padding-top: 30rpx;
+    padding-bottom: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*margin-top:20rpx;*/
+}
+
+.list {
+    margin-top: 30rpx;
+    box-sizing: border-box;
+    width: 670rpx;
+    /*padding: 30rpx;*/
+    /*box-shadow:0px 0px 8px 0px rgba(119,163,149,0.2);*/
+    /*margin-top:20rpx;*/
+}
+
+.no-line {
+    border-bottom: 0 !important;
+}
+
+.list-item {
+    color: #333333;
+    font-size: 28rpx !important;
+}

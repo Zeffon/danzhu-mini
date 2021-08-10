@@ -1,0 +1,45 @@
+<wxs module="s" src="../../wxs/status.wxs"></wxs>
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="str"></wxs>
+
+<view class="container">
+  <view class="header-container">
+    <view class="code-container">
+      <text>{{_group.code}}</text>
+      <z-copy-button value="{{_group.code}}" hover-class="rect-hover" hover-stay-time="300"></z-copy-button>
+    </view>
+    <view>{{_group.user_number}} 人</view>
+    <view style="color:{{s.statusStyle(_group.status).color}}">{{s.statusStyle(_group.status).name}}</view>
+  </view>
+  <view class="title-container">
+    <text class="title">名称：</text>
+    <text class="title-text">{{_group.title}}</text>
+  </view>
+  <view class="admin-container">
+    <image class="avatar" src="{{_group.wx_info.avatarUrl}}"></image>
+    <text class="nickname">{{_group.wx_info.nickName.length >= 15 ? str.substring(_group.wx_info.nickName,0,15)+'...' : _group.wx_info.nickName}}</text>
+  </view>
+  <view class="bottom-container">
+    <l-collapse>
+      <l-collapse-item l-body-class="l-body-class" l-title-class="l-summary-class" customTitle="{{true}}">
+        <view class="more" slot="title">
+          <view class="more-detail">更多详情
+            <l-icon name="down" size="16" color="#999" />
+          </view>
+          <l-button bind:lintap="onEditGroup" data-gid="{{_group.id}}" l-class height="46"
+            size="mini" shape="semicircle" bg-color="#A4E1C1" icon-color="#fff">
+            编辑用户组
+          </l-button>
+        </view>
+        <view class="content">
+          <text class="title">创建时间：</text>
+          <text class="title-text">{{_group.createTime}}</text>
+        </view>
+        <view class="content" wx:if="{{_group.summary.length != 0}}">
+          <text class="summary">简介：</text>
+          <text class="summary-text">{{_group.summary}}</text>
+        </view>
+      </l-collapse-item>
+    </l-collapse>
+  </view>
+
+</view>

@@ -1,0 +1,27 @@
+/* components/empty/index.wxss */
+/*#157658*/
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    margin-top: 300rpx;
+}
+
+.img {
+    margin-bottom: 40rpx;
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.text {
+    margin-bottom: 50rpx;
+}
+
+.btn {
+    background-color: #09AAFF !important;
+    border-radius: 2rpx !important;
+}

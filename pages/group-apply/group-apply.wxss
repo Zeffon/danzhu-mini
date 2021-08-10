@@ -1,0 +1,13 @@
+/* pages/group-apply/group-apply.wxss */
+/* page {
+  background-color: #f7f7f7 !important;
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #212121;
+  font-size: 24rpx;
+}
+

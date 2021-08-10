@@ -1,0 +1,9 @@
+/* components/copy-code/index.wxss */
+
+.btn {
+  margin-left: 10rpx;
+}
+
+.btn-text {
+  font-size: 20rpx;
+}

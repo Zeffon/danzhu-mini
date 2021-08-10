@@ -1,0 +1,12 @@
+/* pages/file-detail/file-detail.wxss */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx;
+}

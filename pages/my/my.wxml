@@ -1,0 +1,23 @@
+<view class="container">
+    <z-my-banner file-count="{{fileCount}}" trash-count="{{trashCount}}" code="{{code}}"
+                 bind:nologin="onShowDialog" bind:login="onHasAuthorized" bind:codetap="onGetUserCode"></z-my-banner>
+
+    <view class="main-container">
+        <z-my-apply-panel hasGetData="{{hasGetData}}"></z-my-apply-panel>
+
+        <view class="list">
+            <l-list bind:lintap="onGotoFileShare" icon="file" l-icon-class="danzhu-file"
+                    l-class-content="list-item" title="我公开的文件">
+            </l-list>
+            <l-list bind:lintap="onGotoHelpAndFellback" icon="help1" l-icon-class="danzhu-help"
+                    l-class-content="list-item" title="帮助与反馈">
+            </l-list>
+        </view>
+
+    </view>
+</view>
+
+<l-dialog content-color="#333333" confirm-color="#09AAFF" 
+          title-color="#09AAFF" bind:linconfirm="onDialogConfirm" show="{{showDialog}}"  
+          content="请先授权登陆我们的小程序" title="授权登陆" type="alert">
+</l-dialog>

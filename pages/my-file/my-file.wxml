@@ -1,0 +1,11 @@
+<view class='container'>
+    <view class="header">
+        <view class="header-title">我的文件</view>
+        <view wx:if="{{isLetter}}" class="select-type" bind:tap="onSelectMonth">按年月</view>
+        <view wx:else class="select-type" bind:tap="onSelectLetter">按字母</view>
+    </view>
+    <z-file-letter wx:if="{{isLetter}}" letters="{{letters}}" items="{{letterFiles}}"></z-file-letter>
+    <z-file-month wx:else months="{{months}}" items="{{monthFiles}}"></z-file-month>
+</view>
+
+<l-loading></l-loading>

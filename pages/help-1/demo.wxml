@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="content">
+        <view class="title">了解如何使用收集夹功能</view>
+        <view>收集夹是每一次任务收集文件所创建的文件夹，会帮助我们进行每一次的文件收集工作。所以每次我们需要收集文件时，都需要新创建一个收集夹。</view>
+    </view>
+    <view class="content">
+        <view class="title">创建收集夹</view>
+        <view>
+            点击首页的【创建收集夹】，需要输入收集夹名称、也可以选择性填写该用户组的简介。
+            设置收集夹有效期，当时间超过设置的期限后，该收集夹将不再接收文件；
+            设置人数上限，超限后也是无法上传文件到该收集夹中。
+        </view>
+    </view>
+    <view class="content">
+        <view class="title">用户组搭配收集夹使用</view>
+        <view>在创建收集夹时，我们是可以指定某一个用户组的，会将该用户组的成员添加到收集夹内。
+            那么在查看收集夹任务收集情况时，我们是可以很直观看到用户组中成员目前的收集情况。
+        </view>
+    </view>
+</view>

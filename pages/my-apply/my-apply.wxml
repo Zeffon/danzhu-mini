@@ -1,0 +1,20 @@
+<l-segment bind:linchange="onSegmentChange" active-key="{{activeKey}}" class="segment" l-class="l-segment"
+           active-color="#09AAFF" l-class-active="active" l-class-line="line">
+    <l-segment-item tab="全部" key="3"></l-segment-item>
+    <l-segment-item tab="等待" key="0"></l-segment-item>
+    <l-segment-item tab="通过" key="1"></l-segment-item>
+    <l-segment-item tab="拒绝" key="2"></l-segment-item>
+</l-segment>
+<view class="container" wx:if="{{!isEmpty}}">
+    <l-loadmore show="{{bottomLoading}}" type="{{loadingType}}" loading-text="努力加载中..." end-text="—— 我也是有底线的 ——">
+        <view slot="content" class="container">
+            <block wx:for="{{items}}" wx:key="index">
+                <z-my-apply-item class="item" item="{{item}}"></z-my-apply-item>
+            </block>
+        </view>
+    </l-loadmore>
+</view>
+
+<view wx:else>
+      <z-empty show text="暂时还没有相关加入用户组的申请"></z-empty>
+</view>

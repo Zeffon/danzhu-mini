@@ -1,0 +1,29 @@
+<view class="container">
+    <image src="/imgs/cover/file-collect-1.jpg" class="img"></image>
+    <view class="main-container">
+        <view class="title">{{collect.title}}</view>
+        <view class="hr"></view>
+        <view class="summary">{{collect.summary}}</view>
+    </view>
+    <view class="time-container" wx:if="{{collect.end_time}}">
+        本链接有效期至 {{collect.end_time}}
+    </view>
+    <view class="bottom-conatiner" wx:if="{{shareBtn}}">
+        <view class="moments" bind:tap="onGotoWxa">
+            <l-button special>
+                <view class="send-moments-btn" hover-class="rect-hover" hover-stay-time="300">
+                    <l-icon name="moments" size="40" color="#ffffff" l-class="danzhu1"></l-icon>
+                    发送至朋友圈
+                </view>
+            </l-button>
+        </view>
+        <view class="friend">
+            <l-button special open-type="share">
+                <view class="send-friend-btn" hover-class="rect-hover" hover-stay-time="300">
+                    <l-icon name="wechat" size="44" color="#ffffff" l-class="danzhu"></l-icon>
+                    发送至好友
+                </view>
+            </l-button>
+        </view>
+    </view>
+</view>

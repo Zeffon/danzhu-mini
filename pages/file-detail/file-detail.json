@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "z-file-item": "/components/file-item/index",
+    "z-file-header": "/components/file-header/index",
+    "z-file-header2": "/components/file-header2/index",
+    "z-file-category": "/components/file-category/index",
+    "z-file-operate": "/components/file-operate/index"
+  }
+}

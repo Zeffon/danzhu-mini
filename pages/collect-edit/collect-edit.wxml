@@ -1,0 +1,56 @@
+<view class="container">
+    <view class="main-container">
+        <l-input label-width="0" placeholder="请输入收集夹的名称" required="{{true}}" rules="{{titleRule}}" clear="{{true}}"
+            l-class="input-while" showRow="{{false}}" width="700" bind:lininput="onInputTitle" bind:linclear="onClear"
+            tip-type="toast" value="{{collect.title}}"></l-input>
+        <view class="textarea">
+            <l-textarea l-class="input-while" value="{{collect.summary}}" placeholder="为你收集夹添加简介" maxlength="64"
+                bind:lininput="onInputSummary">
+            </l-textarea>
+        </view>
+
+        <view class="time-container">
+            <view class="time">
+                本链接有效期至 {{end_time}}
+            </view>
+            <view class="countdown">
+                <l-countdown time="{{period}}" time-type="second" format="{%d}天{%h}:{%m}:{%s}"
+                             l-class="countdown-text" l-class-time="countdown-blue">
+                </l-countdown>
+                <text>后停止收集</text>
+            </view>
+        </view>
+
+        <view class="content">
+            <view class="text-tip">
+                <text class="content-title">延长有效期</text>
+                <text class="tip">有效期过后该收集夹将不会接收文件</text>
+            </view>
+            <view class="counter-container">
+                <z-counter count="{{dateNum}}" bind:linout="onOutNumber" bind:lintap="onSelectValidPeriod">
+                </z-counter> 天
+            </view>
+        </view>
+
+        <view class="content">
+            <view class="text-tip">
+                <text class="content-title">人数上限</text>
+                <text class="tip">超限过后无法上传文件到该收集夹</text>
+            </view>
+            <view class="counter-container">
+                <z-counter2 value="{{numberNum}}" range="{{numberRange}}" bind:changetap="onSelectNumberNum">
+                </z-counter2> 人
+            </view>
+        </view>
+
+        <view class="btn-container">
+            <l-button special bind:lintap="onConfirm">
+                <view class="create-btn" hover-class="rect-hover" hover-stay-time="300">
+                    确定修改收集夹
+                </view>
+            </l-button>
+        </view>
+    </view>
+</view>
+<l-loading></l-loading>
+<l-toast></l-toast>

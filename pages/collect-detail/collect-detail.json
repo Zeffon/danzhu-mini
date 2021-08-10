@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "z-collect-user": "/components/collect-user/index",
+    "z-code-realm": "/components/code-realm/index",
+    "z-more-realm": "/components/more-realm/index",
+    "z-file-category": "/components/file-category/index"
+  }
+}

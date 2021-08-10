@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "z-authorization": "/components/authorization/index"
+  }
+}

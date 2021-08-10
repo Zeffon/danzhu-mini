@@ -1,0 +1,19 @@
+
+function statusStyle(status) {
+    if (status) {
+      return {
+        name: '公开',
+        color: '#34bfa3'
+      }
+    }
+    if (!status) {
+      return {
+        name: '私有',
+        color: '#fe4b5e'
+      }
+    }
+  }
+  
+  module.exports = {
+    statusStyle: statusStyle
+  }

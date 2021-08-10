@@ -1,0 +1,18 @@
+<view class="container">
+    <image src="/imgs/cover/file-collect-1.jpg" class="img"></image>
+    <view class="main-container">
+        <view class="title">{{collect.title}}</view>
+        <view class="hr"></view>
+        <view class="summary">{{collect.summary}}</view>
+    </view>
+    <view class="btn-container">
+        <l-button special bind:lintap="onOpenSelect">
+            <view class="select-file" hover-class="rect-hover" hover-stay-time="300">
+                选择本机/微信文件
+            </view>
+        </l-button>
+    </view>
+    <view class="time-container" wx:if="{{collect.end_time}}">
+        本链接有效期至{{collect.end_time}}
+    </view>
+</view>

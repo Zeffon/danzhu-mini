@@ -1,0 +1,12 @@
+<picker range="{{range}}" bind:change="onPickerChange">
+  <view class="container">
+    <view></view>
+    <view class="border">
+      {{value}}
+    </view>
+    <view>
+      <view class="up-triangle"></view>
+      <view class="down-triangle"></view>
+    </view>
+  </view>
+</picker>

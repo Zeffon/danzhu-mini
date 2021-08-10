@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="content">
+        <view class="title">怎么查看其他人公开分享的文件？</view>
+        <view>当文件的持有者将文件设置公开状态时，我们是可以查看其公开的文件的。相关的方法如下：</view>
+    </view>
+    <view class="content">
+        <view class="title">方法1：用户编号搜索</view>
+        <view>当我们搜索该用户的编号，可以在搜索结果看到共享文件的【查看】，点击便可进入该用户公开的文件列表。</view>
+    </view>
+    <view class="content">
+        <view class="title">方法3：用户组内查看</view>
+        <view>如果是同一个用户组，可以在用户组用户列表中，点击相关用户的头像即可跳转至该用户公开的文件列表。</view>
+    </view>
+    <view class="content">
+        <view class="title">方法2：文件名搜索</view>
+        <view>如果我们知道文件的名称，可以根据文件名进行搜索</view>
+    </view>
+</view>

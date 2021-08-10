@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "z-group-user": "/components/group-user/index"
+  }
+}

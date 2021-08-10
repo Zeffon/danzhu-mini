@@ -1,0 +1,10 @@
+<view class="container">
+    <image src="/imgs/data/file/download.png" class="img" bind:tap="onDownload"></image>
+    <view class="main-container">
+        <view class="title">{{file.title}}</view>
+        <view class="bottom-container">
+            <view>{{create_time}}</view>
+            <view>{{size}}</view>
+        </view>
+    </view>
+</view>

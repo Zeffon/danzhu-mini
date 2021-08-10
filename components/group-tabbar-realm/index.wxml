@@ -1,0 +1,53 @@
+<scroll-view class="container" scroll-y>
+  <view class="inner-container">
+    <view wx:if="{{!isAdd}}" class="edit-container">
+      <view wx:if="{{!isBtnEdit}}">
+        <view class="remark-container">
+          <text class="remark-title">自己在用户组内预留的备注信息</text>
+          <text wx:if="{{_curUser.remark.length == 0}}" class="no-remark-tip">创建用户组时并未设置要求填写备注信息</text>
+          <view wx:else class="edit-remark">
+            <block wx:for="{{_curUser.remark}}" wx:key="index">
+              <view>{{item.key}}：{{item.value}}</view>
+            </block>
+            <view class="edit-btn-container">
+              <l-button special bind:lintap="onShowEdit">
+                <view class="edit-btn" hover-class="rect-hover" hover-stay-time="300">
+                  <l-icon name="edit" size="26" color="#ffffff"></l-icon>
+                  <text>编辑备注</text>
+                </view>
+              </l-button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <text class="remark-title">编辑我在用户组内的备注信息</text>
+        <view class="hr"></view>
+        <view wx:if="{{_curUser.remark.length == 0}}">
+          <text class="no-edit-tip">当前并无备注信息可编辑</text>
+        </view>
+        <view wx:else>
+          <z-remark-btn user="{{_curUser}}"></z-remark-btn>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="add-container">
+      <text class="title">根据用户编号新增成员</text>
+      <view class="hr"></view>
+      <l-input bind:lininput="onInputCode" bind:linclear="onClearCode" label="编号:" value="" placeholder="请输入用户的编号"
+        required="{{true}}" rules="{{codeRule}}" value="{{code}}" clear="{{true}}" width="750">
+      </l-input>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="btn-container">
+  <view bind:tap="onShowRealm" class="cancel btn-font">
+    <text>取消</text>
+  </view>
+  <view bind:tap="onAddUser" class="add btn-font" wx:if="{{isAdd}}">
+    <text>确认新增</text>
+  </view>
+</view>
+
+<l-toast></l-toast>

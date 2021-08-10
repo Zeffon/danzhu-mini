@@ -1,0 +1,55 @@
+l-index-list {
+    transition: 0.3s;
+}
+
+.l-selected-class {
+    background-color: #06c05f !important;
+}
+
+.l-tip-text-class {
+    color: #fff !important;
+    font-size: 48rpx !important;
+}
+
+.l-tip-class {
+    background-color: #cccccc !important;
+}
+
+.person-item {
+    display: flex;
+    align-items: center;
+    color: #1a1a1a;
+    background-color: #fff;
+    height: 110rpx;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+}
+
+.person-avatar {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 10rpx;
+}
+
+.title {
+    margin-left: 20rpx;
+}
+
+.sidebar-class {
+    right: 0 !important;
+    padding-left: 10rpx !important;
+    padding-right: 20rpx !important;
+    right: 16rpx !important;
+}
+
+.anchor {
+    width: 100%;
+    background-color: #f7f8fa;
+    display: flex;
+    align-items: center;
+    padding: 8rpx 0 8rpx 30rpx;
+    font-size: 26rpx;
+    font-weight: 700;
+    color: #323132;
+    box-sizing: border-box;
+}

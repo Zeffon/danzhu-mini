@@ -1,0 +1,8 @@
+<view class="container">
+  <l-checkbox-group bind:linchange="onChange">
+    <l-checkbox l-class="l-checkbox-color" wx:for="{{users}}" wx:key="index" 
+                placement="right" key="{{item.id}}" checked="{{item.checked}}"> 
+      <z-group-user user="{{item}}"></z-group-user>
+    </l-checkbox>
+  </l-checkbox-group>
+</view>

@@ -1,0 +1,29 @@
+<view class="inner-container">
+    <view class="title-row">
+        <text>我的申请</text>
+    </view>
+    <view class="icon-row">
+        <view data-key="3" bind:tap="onGotoMyApply" class="icon-item">
+            <l-icon name="all" l-class="danzhu"></l-icon>
+            <text>全部</text>
+        </view>
+        <view data-key="0" bind:tap="onGotoMyApply" class="icon-item">
+            <l-badge show="{{waitingCount!==0}}" shape="circle" max-count="99" value="{{waitingCount}}">
+                <l-icon name="waiting" l-class="danzhu"></l-icon>
+            </l-badge>
+            <text>等待</text>
+        </view>
+        <view data-key="1" bind:tap="onGotoMyApply" class="icon-item">
+            <l-badge show="{{passedCount!==0}}" shape="circle" max-count="99" value="{{passedCount}}">
+                <l-icon name="passed" l-class="danzhu"></l-icon>
+            </l-badge>
+            <text>通过</text>
+        </view>
+        <view data-key="2" bind:tap="onGotoMyApply" class="icon-item">
+            <l-badge show="{{refusedCount!==0}}" shape="circle" max-count="99" value="{{refusedCount}}">
+                <l-icon name="refused" l-class="danzhu"></l-icon>
+            </l-badge>
+            <text>拒绝</text>
+        </view>
+    </view>
+</view>

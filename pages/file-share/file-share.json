@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "z-file-item": "/components/file-item/index",
+    "z-file-operate": "/components/file-operate/index",
+    "z-file-operate2": "/components/file-operate2/index",
+    "z-uploading": "/components/uploading/index",
+    "z-file-header3": "/components/file-header3/index"
+  }
+}

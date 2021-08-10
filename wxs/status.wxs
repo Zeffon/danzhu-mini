@@ -1,0 +1,25 @@
+
+function statusStyle(status) {
+  if (status === 0) {
+    return {
+      name: '无需验证',
+      color: '#34bfa3'
+    }
+  }
+  if (status === 1) {
+    return {
+      name: '需要验证',
+      color: '#EFCE8C'
+    }
+  }
+  if (status === 2) {
+    return {
+      name: '不可加入',
+      color: '#DB5847'
+    }
+  }
+}
+
+module.exports = {
+  statusStyle: statusStyle
+}

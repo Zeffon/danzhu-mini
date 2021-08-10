@@ -1,0 +1,17 @@
+<view class="outer-container">
+  <scroll-view scroll-y class="container" bindscrolltolower='onScrollTolower'>
+    <view class="inner-container">
+      <l-radio-group none-checked="{{false}}" bind:linchange="onChangeStatus">
+        <block wx:for="{{groups}}" wx:key="index">
+          <view class="main-container">
+            <view class="title">
+              <l-radio size="50" key="{{index}}" select-color="#09AAFF"></l-radio>
+              <text class="title-text">{{item.title}}</text>
+            </view>
+            <text class="title-text">{{item.user_number}}人</text>
+          </view>
+        </block>
+      </l-radio-group>
+    </view>
+  </scroll-view>
+</view>

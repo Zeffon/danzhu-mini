@@ -1,0 +1,14 @@
+<view>
+    <view wx:if="{{category == 1}}">
+        <z-ec-bar cid="{{cid}}"></z-ec-bar>
+    </view>
+    <view wx:if="{{category == 2}}">
+        <z-ec-gauge cid="{{cid}}"></z-ec-gauge>
+    </view>
+    <view wx:if="{{category == 3}}">
+        <z-ec-line cid="{{cid}}"></z-ec-line>
+    </view>
+    <view wx:if="{{category == 4}}">
+        <z-ec-pie cid="{{cid}}"></z-ec-pie>
+    </view>
+</view>

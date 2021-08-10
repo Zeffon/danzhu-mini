@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="main-container">
+        <l-list l-class="l-list" bind:lintap="onGotoDemo1" title="如何使用收集夹功能"></l-list>
+        <l-list l-class="l-list" bind:lintap="onGotoDemo2" title="如何使用用户组功能"></l-list>
+        <l-list l-class="l-list" bind:lintap="onGotoDemo3" title="搜索功能怎么使用？"></l-list>
+        <l-list l-class="l-list" bind:lintap="onGotoDemo4" title="文件删除后，还能找回吗？"></l-list>
+        <l-list l-class="l-list" bind:lintap="onGotoDemo5" title="怎么查看其他人公开分享的文件？"></l-list>
+        <l-list l-class="l-list" bind:lintap="onGotoClearCache" title="小程序加载出错了，如何清理缓存？"></l-list>
+    </view>
+    <view class="bottom-container">
+        <l-button special open-type="contact">
+            <l-icon name="wechat" l-class="danzhu-wechat"></l-icon>
+            <text class="wechat-text">意见反馈</text>
+        </l-button>
+    </view>
+</view>

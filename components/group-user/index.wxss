@@ -1,0 +1,41 @@
+/* components/group-user/index.wxss */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6rpx;
+  box-sizing: border-box;
+  width: 710rpx;
+  padding: 10rpx;
+}
+
+.avatar {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 10rpx;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  color: #212121;
+  margin-left: 20rpx;
+  flex: 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.name {
+  margin-left: 20rpx;
+}
+
+.create-time {
+  font-size: 20rpx;
+  color: #999999;
+}

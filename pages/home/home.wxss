@@ -1,0 +1,63 @@
+@import "../../wxss/danzhu.wxss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-btn {
+  background-color: #f1f1f1  !important;
+  color: #C4C9D2  !important;
+  font-size: 24rpx !important;
+  font-weight: 400 !important;
+  border-radius: 4rpx !important;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200rpx;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-container l-button {
+  margin-top: 70rpx;
+}
+
+.collect-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #09AAFF;
+  color: #ffffff;
+  height: 120rpx;
+  width: 450rpx;
+  border-radius: 180rpx;
+}
+
+.group-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1f3ff;
+  color: #09AAFF;
+  height: 120rpx;
+  width: 450rpx;
+  border-radius: 180rpx;
+}

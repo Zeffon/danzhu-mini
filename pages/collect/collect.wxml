@@ -1,0 +1,51 @@
+<view class="outer-container" style="height:100rpx;">
+    <l-tabs wx:if="{{!isChecked}}" l-header-class="swipeable-header" l-inactive-class="swipeable-inactive-class"
+        l-line-class="line-class" l-active-class="swipeable-active-class" active-key="{{activeKey}}" swipeable
+        has-line="{{true}}" animated-for-line="{{true}}" active-color="#09AAFF" bind:linchange="onTabpanelChange">
+        <l-tabpanel tab="我收集的" key="collect" slot="collect"></l-tabpanel>
+        <l-tabpanel tab="我发出的" key="send" slot="send"></l-tabpanel>
+    </l-tabs>
+    <view wx:else class="check-container">
+        <view class="check">
+            <text wx:if="{{!allChecked}}" bind:tap="onSelectAll">全选</text>
+            <text wx:else bind:tap="onCancelAll">取消全选</text>
+        </view>
+        <view class="delete {{selectedNum == 0 ? '' : 'selected'}}">
+            <l-icon bind:tap="onDeleteItem" name="delete" color="{{selectedNum == 0 ? '#9e9e9e' : '#fe4b5e'}}"></l-icon>
+            已选中 {{selectedNum}} 个
+        </view>
+        <view class="check-canecl" bind:tap="onCloseCheck">取消</view>
+    </view>
+</view>
+
+<l-loadmore wx:if="{{activeKey == 'collect'}}" show="{{bottomLoading1}}" type="{{loadingType1}}" loading-text="努力加载中..."
+    end-text="别拉了，我也是有底线的T_T">
+    <view slot="content">
+        <view class="container">
+            <block wx:for="{{collects}}" wx:key="index">
+                <z-collect-item bind:detail="onItemTap" bind:longpress="onOpenCheck" item="{{item}}"
+                    isChecked="{{isChecked}}">
+                </z-collect-item>
+            </block>
+            <z-empty wx:if="{{isEmpty1}}" bind:btntap="onGotoCollect" show-btn show text="当前没有收集夹" btn-text="去创建">
+            </z-empty>
+        </view>
+    </view>
+</l-loadmore>
+
+<l-loadmore wx:else show="{{bottomLoading2}}" type="{{loadingType2}}" loading-text="努力加载中..." end-text="别拉了，我也是有底线的T_T">
+    <view slot="content">
+        <view class="container">
+            <block wx:for="{{files}}" wx:key="index">
+                <view class="file">
+                    <z-file-item2 item="{{item}}"></z-file-item2>
+                </view>
+            </block>
+            <z-empty wx:if="{{isEmpty2}}" bind:btntap="onGotoCollect" show-btn show text="当前没有发出文件" btn-text="去上传">
+            </z-empty>
+        </view>
+    </view>
+</l-loadmore>
+
+<l-dialog></l-dialog>
+<l-toast></l-toast>

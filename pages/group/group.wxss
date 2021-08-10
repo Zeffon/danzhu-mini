@@ -1,0 +1,35 @@
+/* pages/group/group.wxss */
+.container {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.swipeable-header {
+  margin: 0 auto;
+  width: 327rpx !important;
+  border: 0 !important;
+}
+
+.swipeable-inactive-class {
+  border-width: 8rpx !important;
+}
+
+.swipeable-active-class {
+  font-weight: 900 !important;
+  font-size: 34rpx !important;
+  border-width: 6rpx !important;
+}
+
+.line-class {
+  width: 60rpx !important;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28rpx;
+  color: rgba(140, 152, 174, 1);
+}

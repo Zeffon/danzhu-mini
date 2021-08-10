@@ -1,0 +1,25 @@
+
+function statusStyle(status) {
+  if (status === 0) {
+    return {
+      name: '等待',
+      color: '#EFCE8C'
+    }
+  }
+  if (status === 1) {
+    return {
+      name: '通过',
+      color: '#34bfa3'
+    }
+  }
+  if (status === 2) {
+    return {
+      name: '拒绝',
+      color: '#DB5847'
+    }
+  }
+}
+
+module.exports = {
+  statusStyle: statusStyle
+}

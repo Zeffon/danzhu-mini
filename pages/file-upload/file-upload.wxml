@@ -1,0 +1,18 @@
+<view class="container">
+    <z-file-header detail="{{collect}}" isAdmin="{{true}}" bind:clicktap="onOpenCategory"></z-file-header>
+
+    <view class="main-container">
+        <block wx:for="{{collect.files}}" wx:key="index">
+            <z-file-item item="{{item}}" bind:itemtap="onItemTap"></z-file-item>
+        </block>
+    </view>
+</view>
+
+<z-file-category show="{{showCategory}}" bind:cancel="onCloseCategory" bind:imagetap="onSelectImage" bind:filetap="onSelectFile"></z-file-category>
+<z-uploading show="{{showUploading}}" percent="{{percent}}" count="{{uploadCount}}"></z-uploading>
+<z-file-operate show="{{showOperate}}" file="{{file}}" 
+                bind:delete="onDeleteFile" bind:cancel="onCloseOperate">
+</z-file-operate>
+
+<l-toast></l-toast>
+<l-dialog></l-dialog>

@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+	<view class="search-container">
+		<l-button width="710" l-class height="70" icon="research" icon-size="24" icon-color="#C4C9D2"
+			l-class="search-btn" bind:lintap="onGotoSearch" shape="semicircle">
+			搜索文件/用户/用户组
+		</l-button>
+	</view>
+
+	<view class="main-container">
+		<view class="btn-container">
+			<l-button special bind:lintap="onCreateCollect">
+				<view class="collect-btn" hover-class="rect-hover" hover-stay-time="300">
+					创建收集夹
+				</view>
+			</l-button>
+
+			<l-button special bind:lintap="onCreateGroup">
+				<view class="group-btn" hover-class="rect-hover" hover-stay-time="300">
+					创建用户组
+				</view>
+			</l-button>
+		</view>
+
+	</view>
+</view>

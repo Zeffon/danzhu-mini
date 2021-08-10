@@ -1,0 +1,9 @@
+<view class="header-container">
+    <image class="avatar" src="{{detail.avatar}}"></image>
+    <view class="info-container">
+        <text class="nickname"> <text>{{detail.nickName}}</text> 上传的文件</text>
+        <view class="header-bottom">
+            <view class="count">共上传 <text>{{detail.files.length}}</text> 个文件</view>
+        </view>
+    </view>
+</view>

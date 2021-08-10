@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "z-file-letter": "/components/file-letter/index",
+        "z-file-month": "/components/file-month/index"
+    }
+}

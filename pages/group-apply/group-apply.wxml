@@ -1,0 +1,18 @@
+<l-loadmore show="{{bottomLoading}}" type="{{loadingType}}" loading-text="努力加载中..." end-text="行了~~点到为止，我可是有底线">
+  <view slot="content">
+    <view class="container" wx:if="{{!isEmpty}}">
+      <block wx:for="{{users}}" wx:key="index">
+        <z-group-user-apply user="{{item}}" bind:choosetap="onChangeStatus"></z-group-user-apply>
+      </block>
+    </view>
+    <view wx:else>
+      <z-empty show text="暂时没有人向该用户组发起申请"></z-empty>
+    </view>
+  </view>
+</l-loadmore>
+
+
+<l-toast></l-toast>
+
+<!-- 打算做个头部标签栏，可以查看总的申请数量，切换全部、等待、通过、拒绝的按钮
+不同状态显示的文本不同，比如申请成功的申请人数，多少人重复申请 -->

@@ -1,0 +1,156 @@
+/* components/code-realm/index.wxss */
+.container {
+    font-size: 26rpx;
+    display: flex;
+    flex-direction: column;
+    height: 500rpx;
+    background-color: #ffffff;
+}
+
+.tip {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    color: #999999;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.period-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30rpx 0;
+}
+
+.code-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 20rpx 0;
+    width: 700rpx;
+    margin-left: 30rpx;
+}
+
+.input {
+
+}
+
+.l-input {
+    margin-left: 16rpx;
+    background-color: #f9f9f9 ;
+    border: 2rpx solid #09AAFF;
+    height: 39rpx !important;
+    font-size: 22rpx !important;
+}
+
+.l-label {
+    padding-left: 10rpx !important;
+    padding-right: 0rpx !important;
+}
+
+.period-title {
+    color: #212121;
+    font-size: 28rpx;
+}
+
+.radio-group l-radio {
+    margin-left: 50rpx;
+}
+
+.radio {
+    margin-left: 10rpx;
+    font-size: 28rpx !important;
+}
+
+.create-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #09AAFF;
+    color: #ffffff;
+    height: 70rpx;
+    width: 240rpx;
+    font-size: 24rpx;
+    border-radius: 50rpx;
+    margin-top: 40rpx;
+}
+
+.success-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.success-img {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50rpx;
+}
+
+.success-tip {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rpx;
+    color: #9e9e9e;
+}
+
+.success-tip :first-child {
+    color: #09AAFF;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 30rpx;
+    width: 700rpx;
+    color: #212121;
+    font-size: 24rpx;
+}
+
+.link-content :first-child {
+    margin-bottom: 20rpx;
+}
+
+.copy-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #09AAFF;
+    color: #ffffff;
+    height: 70rpx;
+    width: 300rpx;
+    font-size: 24rpx;
+    border-radius: 50rpx;
+    margin-top: 60rpx;
+}
+
+.period-time {
+    color: #666666;
+    font-size: 20rpx;
+    margin-top: 60rpx;
+}
+
+.cancel {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 92%;
+    height: 100rpx;
+    background-color: #f9f9f9;
+    color: #212121;
+    font-size: 30rpx;
+    font-weight: bold;
+}

@@ -1,0 +1,19 @@
+<view wx:if="{{hasAuthorized}}">
+    <view  wx:if="{{!isEnd}}">
+        <z-collect-upload wx:if="{{isUpload}}" collect="{{collect}}" bind:showpopup="onShowCategory"></z-collect-upload>
+        <z-collect-upload2 wx:if="{{!isUpload}}" collect="{{collect}}" bind:upload="onOpenUpload"></z-collect-upload2>
+    </view>
+    <z-collect-upload3 wx:if="{{isEnd}}"></z-collect-upload3>
+</view>
+<z-authorization wx:else bind:login="onLogin"></z-authorization>
+
+
+<z-file-category show="{{showCategory}}" bind:cancel="onCloseCategory" bind:imagetap="onSelectImage"
+    bind:filetap="onSelectFile"></z-file-category>
+
+<l-toast></l-toast>
+<z-uploading show="{{showUploading}}" percent="{{percent}}" count="{{uploadCount}}"></z-uploading>
+
+<l-dialog content-color="#333333" confirm-color="#09AAFF" title-color="#09AAFF" bind:linconfirm="onDialogConfirm"
+    show="{{showDialog}}" content="请先授权登陆我们的小程序" title="授权登陆" type="confirm">
+</l-dialog>

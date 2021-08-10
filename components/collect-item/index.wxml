@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="inner-container" bind:tap="onDetail">
+    <view class="img-container">
+      <image wx:if="{{item.checked}}" src="/imgs/data/selected.png" class="selected"></image>
+      <image wx:else src="/imgs/data/folder.png" class="{{isChecked ? 'ring' : ''}}"></image>
+    </view>
+    <view class="main-container">
+      <view class="head">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="middle">
+        <text class="user-send">{{item.user_number}}/{{item.user_limit}}已发送</text>
+        <view class="countdown" wx:if="{{item.period}}">
+          <l-countdown time="{{item.period}}" time-type="second" format="{%d}天{%h}:{%m}:{%s}"
+                     l-class="countdown-text" l-class-time="countdown-blue">
+          </l-countdown>后停止收集
+        </view>
+      </view>
+      <text>{{item.create_time}}</text>
+    </view>
+  </view>
+  <view class="btn-container">
+    <l-button wx:if="{{item.period}}" bindlintap="onAgainShare" bg-color="#e2f4ff" l-class="share" width="90" height="36" size="mini">
+      <text>再次分享</text>
+    </l-button>
+    <l-button wx:else bg-color="#fafafa" l-class="stop-share" width="100" height="30" size="mini">
+      <text>停止收集</text>
+    </l-button>
+  </view>
+
+</view>

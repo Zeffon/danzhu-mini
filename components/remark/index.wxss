@@ -1,0 +1,45 @@
+/*引入公共样式*/
+@import "../../wxss/danzhu.wxss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.l-form-btn-class{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  height: 70rpx;
+  color: #ffffff;
+}
+
+.cancel-btn {
+  display: flex;
+  justify-content: space-between;
+  background-color: #999999;
+  width: 100rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  margin-right: 20rpx;
+}
+
+.confirm-btn {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3BAA33;
+  width: 100rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+}

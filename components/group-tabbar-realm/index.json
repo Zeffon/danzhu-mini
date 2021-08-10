@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "z-remark": "/components/remark/index",
+    "z-remark-btn": "/components/remark-btn/index"
+  }
+}

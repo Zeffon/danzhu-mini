@@ -1,0 +1,216 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "enhance": true,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": true,
+        "coverView": true,
+        "nodeModules": true,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "useIsolateContext": true,
+        "useCompilerModule": true,
+        "userConfirmedUseCompilerModuleSwitch": false,
+        "useMultiFrameRuntime": false,
+        "useApiHook": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.13.2",
+    "appid": "wx882525de57ead1ce",
+    "projectname": "danzhu-mini",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "isGameTourist": false,
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "测试",
+                    "pathName": "pages/test/test",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "用户组",
+                    "pathName": "pages/group/group",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "搜索",
+                    "pathName": "pages/search/search",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "用户组详情",
+                    "pathName": "pages/group-detail/group-detail",
+                    "query": "gid=5",
+                    "scene": null
+                },
+                {
+                    "name": "用户组编辑",
+                    "pathName": "pages/group-edit/group-edit",
+                    "query": "gid=5",
+                    "scene": null
+                },
+                {
+                    "name": "用户组分享",
+                    "pathName": "pages/group-share/group-share",
+                    "query": "gid=5",
+                    "scene": null
+                },
+                {
+                    "name": "用户组创建",
+                    "pathName": "pages/group-create/group-create",
+                    "query": "gid=5",
+                    "scene": null
+                },
+                {
+                    "name": "用户组申请",
+                    "pathName": "pages/group-apply/group-apply",
+                    "query": "gid=5",
+                    "scene": null
+                },
+                {
+                    "name": "收集夹",
+                    "pathName": "pages/collect/collect",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "收集夹创建",
+                    "pathName": "pages/collect-create/collect-create",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "收集夹分享",
+                    "pathName": "pages/collect-share/collect-share",
+                    "query": "cid=23",
+                    "scene": null
+                },
+                {
+                    "name": "我的页面",
+                    "pathName": "pages/my/my",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "收集夹详情",
+                    "pathName": "pages/collect-detail/collect-detail",
+                    "query": "cid=23",
+                    "scene": null
+                },
+                {
+                    "name": "收集夹单个用户的上传情况",
+                    "pathName": "pages/file-upload/file-upload",
+                    "query": "uid=43&cid=23",
+                    "scene": null
+                },
+                {
+                    "name": "我的文件",
+                    "pathName": "pages/my-file/my-file",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "废纸篓",
+                    "pathName": "pages/trash/trash",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "帮助页面",
+                    "pathName": "pages/help/help",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "帮助-清除缓存",
+                    "pathName": "pages/help-2/clear-cache",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "帮助-演示demo",
+                    "pathName": "pages/help-1/demo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "查看文件共享页面",
+                    "pathName": "pages/file-share/file-share",
+                    "query": "uid=73",
+                    "scene": null
+                },
+                {
+                    "name": "收集夹编辑",
+                    "pathName": "pages/collect-edit/collect-edit",
+                    "query": "cid=23",
+                    "scene": null
+                },
+                {
+                    "name": "统计页面",
+                    "pathName": "pages/collect-statistics/collect-statistics",
+                    "query": "cid=23",
+                    "scene": null
+                },
+                {
+                    "name": "收集夹上传",
+                    "pathName": "pages/collect-upload/collect-upload",
+                    "query": "cid=23",
+                    "scene": null
+                },
+                {
+                    "name": "用户组加入",
+                    "pathName": "pages/group-add/group-add",
+                    "query": "gid=5",
+                    "scene": null
+                },
+                {
+                    "name": "小程序码",
+                    "pathName": "pages/wxa/wxa",
+                    "query": "gid=19&page=pages/home/home&width=200",
+                    "scene": null
+                },
+                {
+                    "name": "搜索",
+                    "pathName": "pages/search/search",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

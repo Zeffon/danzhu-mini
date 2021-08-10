@@ -1,0 +1,17 @@
+/* components/uploading/index.wxss */
+.container {
+    background-color: #ffffff;
+    height: 300rpx;
+    width: 400rpx;
+    box-sizing: border-box;
+    color: #212121;
+    font-size: 24rpx;
+    display: flex;
+    padding: 30rpx;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    margin-top: 30rpx;
+}

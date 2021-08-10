@@ -1,0 +1,36 @@
+/* pages/my-file/my-file.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    box-sizing: border-box;
+    padding-bottom: 20rpx;
+    font-size: 28rpx;
+}
+
+.header {
+    padding: 30rpx 0;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 30rpx;
+    line-height: 36rpx;
+    color: #212121;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+.select-type {
+    margin-left: 640rpx;
+    color: #09AAFF;
+    line-height: 36rpx;
+}

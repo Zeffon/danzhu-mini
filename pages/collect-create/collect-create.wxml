@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="main-container">
+    <l-input label-width="0" placeholder="请输入收集夹的名称" required="{{true}}" rules="{{titleRule}}" clear="{{true}}"
+      l-class="input-while" showRow="{{false}}" width="700" bind:lininput="onInputTitle" bind:linclear="onClear"
+      tip-type="toast"></l-input>
+    <view class="textarea">
+      <l-textarea l-class="input-while" placeholder="为你收集夹添加简介" maxlength="64" bind:lininput="onInputSummary">
+      </l-textarea>
+    </view>
+    <view class="content">
+      <view class="text-tip">
+        <text class="content-title">有效期</text>
+        <text class="tip">有效期过后该收集夹将不会接收文件</text>
+      </view>
+      <view class="counter-container">
+        <z-counter count="{{dateNum}}" bind:linout="onOutNumber" bind:lintap="onSelectValidPeriod">
+        </z-counter> 天
+      </view>
+    </view>
+
+    <view class="content">
+      <view class="text-tip">
+        <text class="content-title">人数上限</text>
+        <text class="tip">超限过后无法上传文件到该收集夹</text>
+      </view>
+      <view class="counter-container">
+        <z-counter2 value="{{numberNum}}" range="{{numberRange}}" bind:changetap="onSelectNumberNum"></z-counter2> 人
+      </view>
+    </view>
+
+    <!-- <view class="content">
+      <text class="content-title2">文件类型</text>
+      <view>
+
+      </view>
+    </view> -->
+
+    <view class="content">
+      <view class="text-tip">
+        <text class="content-title2">是否指定用户组</text>
+        <text class="tip">指定用户组会让用户成员加入该收集夹中</text>
+      </view>
+      <view>
+        <z-switch bind:switchtap="onSwitchItem" value="{{switchValue}}"></z-switch>
+      </view>
+    </view>
+
+
+    <view wx:if="{{switchValue}}">
+      <view wx:if="{{hasGroup}}" class="select-group">
+        <view wx:if="{{selectGroup == ''}}">
+          <text class="text-require">*</text>
+          <text class="tip2">未选择用户组</text>
+        </view>
+        <view wx:else>
+          <text class="tip2">已选择：</text>
+          <text class="tip2">{{selectGroup.title}}</text>
+        </view>
+        <z-group-select groups="{{groups}}" bind:selecttap="onSelectGroup" bind:moretap="onGetMoreGroup">
+        </z-group-select>
+      </view>
+      <view wx:else class="no-group">
+        <text class="tip2">暂时还没有创建用户组</text>
+        <l-button size="mini" l-class="create-group-btn" bind:lintap="onGotoCreateGroup">去创建</l-button>
+        <view class="tip">Tip: 创建完用户组记得邀请好友加入哟！</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="btn-container">
+    <l-button special bind:lintap="onConfirm">
+      <view class="create-btn" hover-class="rect-hover" hover-stay-time="300">
+        确定新建收集夹
+      </view>
+    </l-button>
+  </view>
+</view>
+
+<l-loading></l-loading>
+<l-toast></l-toast>

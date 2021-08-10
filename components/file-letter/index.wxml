@@ -1,0 +1,14 @@
+<l-index-list scroll-top="{{scrollTop}}" l-selected-class="l-selected-class" l-tip-class="l-tip-class"
+    style="width:100%" sidebar-data="{{letters}}" l-sidebar-class="sidebar-class" show-sidebar="{{false}}"
+    l-tip-text-class="l-tip-text-class" bind:linselected="onSelected"
+    stick-offset-top="100rpx" is-stick="{{true}}">
+    <view slot="tip">
+        <view>{{letter}}</view>
+    </view>
+    <block wx:for="{{letters}}" wx:key="index" wx:for-item="letter">
+        <l-index-anchor class="anchor">{{letter}}</l-index-anchor>
+        <block wx:for="{{items[letter]}}" wx:key="index" wx:for-item="file">
+            <z-file-item2 item="{{file}}"></z-file-item2>
+        </block>
+    </block>
+</l-index-list>

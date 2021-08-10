@@ -1,0 +1,34 @@
+<view class="container">
+    <view class="content">
+        <view class="title">小程序加载出错了，如何清理缓存？</view>
+        <view>若小程序内出现账号信息加载不一致等问题，可能是小程序缓存导致的历史遗留问题，请参考以下步骤进行缓存清理：</view>
+    </view>
+    <view class="content">
+        <view class="title">方法1：直接清理小程序缓存</view>
+        <view>清理小程序内的缓存，点击下方按钮，清理缓存后再试。缓存清理后，会进行重新授权登录。</view>
+        <l-button special class="btn-container" open-type="getUserInfo" bind:getuserinfo="onClearCache">
+            <view class="clear-btn">
+                清理小程序缓存
+            </view>
+        </l-button>
+    </view>
+    <view class="content">
+        <view class="title">方法2：手动清理小程序缓存</view>
+        <view>若使用方法1后，仍然出现相同问题，则可以参照如下方法手动清理小程序缓存：</view>
+        <view>1.微信内找到【发现】 - 【小程序】，在小程序列表中右滑或长按，删除速集侠小程序；</view>
+        <view>2.微信内重新搜索速集侠小程序，授权登录后查看。</view>
+    </view>
+    <view class="content">
+        <view class="title">清理缓存后仍存在问题？</view>
+        <view>若清理缓存后，仍然出现该问题，请点击下方的“意见反馈”，联系我们的客服人员，我们将第一时间为您解答。</view>
+    </view>
+</view>
+
+<view class="bottom-container">
+    <l-button special open-type="contact">
+        <l-icon name="wechat" l-class="danzhu-wechat"></l-icon>
+        <view class="wechat-text">意见反馈</view>
+    </l-button>
+</view>
+
+<l-toast></l-toast>

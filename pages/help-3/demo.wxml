@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="content">
+        <view class="title">如何更好地使用搜索功能</view>
+        <view>搜索支持搜索根据用户编号搜索用户，根据用户组编号搜索用户组。搜索到某一用户查看其分享的【公开】文件。
+            搜索到用户组时，我们可以根据情况查看详情、编辑、加入、退出用户组的操作
+        </view>
+    </view>
+    <view class="content">
+        <view class="title">历史和热门搜索</view>
+        <view>
+            每一次搜索我们都会记录您的搜索记录，您也可以点击历史记录也可以进行搜索。
+            热门搜索是根据速集侠用户正在热门搜索的记录显示，您可以进行搜索查看哦。
+        </view>
+    </view>
+    <view class="content">
+        <view class="title">文件名搜索</view>
+        <view>
+            同时，我们还支持根据文件名来检索相关关键字的文件。不过，该文件必须是持有者设置为【公开状态】才可以被搜索到。
+        </view>
+    </view>
+</view>

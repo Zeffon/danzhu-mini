@@ -1,0 +1,106 @@
+/* components/collect/index.wxss */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #9e9e9e;
+  font-size: 20rpx;
+  padding: 16rpx 0;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+}
+
+.img-container {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.img-container image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 30rpx;
+}
+
+.selected {
+  width: 70rpx !important;
+  height: 70rpx !important;
+}
+
+.ring {
+  padding: 6rpx;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  color: #212121;
+  font-size: 24rpx;
+}
+
+.title {
+  margin-left: 10rpx;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 6rpx 0;
+}
+
+.user-send {
+  margin-right: 30rpx;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.countdown-blue {
+  width: 4rpx;
+  background: transparent;
+  color: #9e9e9e;
+  font-size: 20rpx;
+  height: 28rpx !important;
+}
+
+.countdown-text {
+  color: #9e9e9e;
+  font-size: 20rpx;
+  line-height: 20px !important;
+}
+
+.btn-container {
+  padding: 0 30rpx 0 20rpx;
+}
+
+.share {
+  border-radius: 34% !important;
+}
+
+.share text{
+  font-size: 18rpx;
+  color: #18a2ed;
+}
+
+.stop-share {
+  border-radius: 36% !important;
+}
+
+.stop-share text {
+  font-size: 18rpx;
+  color: #b6b6b6;
+}

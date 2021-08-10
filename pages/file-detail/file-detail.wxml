@@ -1,0 +1,18 @@
+<view class="container">
+    <z-file-header wx:if="{{cid != 0}}" detail="{{detail}}" isAdmin="{{false}}" bind:clicktap="onOpenCategory"></z-file-header>
+    <z-file-header2 wx:else detail="{{detail}}" bind:clicktap="onOpenCategory"></z-file-header2>
+
+    <view class="main-container">
+        <block wx:for="{{detail.files}}" wx:key="index">
+            <z-file-item item="{{item}}" bind:itemtap="onItemTap"></z-file-item>
+        </block>
+    </view>
+</view>
+
+<z-file-category show="{{showCategory}}" bind:cancel="onCloseCategory" bind:imagetap="onSelectImage" bind:filetap="onSelectFile"></z-file-category>
+<z-uploading show="{{showUploading}}" percent="{{percent}}" count="{{uploadCount}}"></z-uploading>
+<z-file-operate show="{{showOperate}}" online="{{true}}" file="{{file}}" bind:delete="onDeleteFile" bind:cancel="onCloseOperate" bind:online="onSetOnline"></z-file-operate>
+
+<l-loading></l-loading>
+<l-toast></l-toast>
+<l-dialog></l-dialog>

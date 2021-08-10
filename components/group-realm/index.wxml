@@ -1,0 +1,69 @@
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="str"></wxs>
+
+<scroll-view class="container" scroll-y>
+  <view class="inner-container">
+    <view class="info-container">
+      <image src="{{user.wx_info.avatarUrl}}" class="avatar-img"></image>
+      <view class="info">
+        <text>昵称：{{user.wx_info.nickName.length >= 15 ? str.substring(user.wx_info.nickName, 0, 15)+'...' : user.wx_info.nickName}}</text>
+        <view>
+          <text>编号：{{user.code}}</text>
+          <z-copy-button value="{{_group.code}}" hover-class="rect-hover" hover-stay-time="300"></z-copy-button>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{isAdmin}}">
+      <view class="hr"></view>
+      <view class="btn-container">
+        <view wx:if="{{user.remark.length != 0}}">
+          <l-button special data-id="{{user.id}}" bind:lintap="onEditClick">
+            <view class="edit-btn" hover-class="rect-hover" hover-stay-time="300">
+              <l-icon name="edit" size="26" color="#ffffff"></l-icon>
+              <text>编辑备注</text>
+            </view>
+          </l-button>
+        </view>
+        <view wx:else>
+          <l-button special disabled="{{true}}">
+            <view class="no-edit-btn">
+              <l-icon name="edit" size="26" color="#ffffff"></l-icon>
+              <text>编辑备注</text>
+            </view>
+          </l-button>
+        </view>
+        <l-button special data-id="{{user.id}}" bind:lintap="onDeleteUser">
+          <view class="delete-btn" hover-class="rect-hover" hover-stay-time="300">
+            <l-icon name="delete" size="26" color="#ffffff"></l-icon>
+            <text>移除用户</text>
+          </view>
+        </l-button>
+      </view>
+    </view>
+    <view class="hr"></view>
+    <view wx:if="{{!isEdit}}">
+      <view class="remark-container">
+        <text class="remark-title">用户组预留信息</text>
+        <text wx:if="{{user.remark == null}}" class="no-remark-tip">创建用户组时并未设置要求填写备注信息</text>
+        <view wx:else class="remark">
+          <block wx:for="{{user.remark}}" wx:key="index">
+            <view class="remark-text">{{item.key}}：{{item.value}}</view>
+          </block>
+        </view>
+      </view>
+      <view class="hr"></view>
+      <view class="join-time">
+        加入时间：{{create_time}}
+      </view>
+    </view>
+    <view wx:if="{{isEdit}}">
+      <z-remark-btn user="{{user}}" isAdmin="{{isAdmin}}"></z-remark-btn>
+    </view>
+  </view>
+</scroll-view>
+
+<view bind:tap="onShowRealm" class="bottom-btn">
+  <text>取消</text>
+</view>
+
+<l-toast></l-toast>

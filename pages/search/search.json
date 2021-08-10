@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "z-group": "/components/group/index",
+    "z-file": "/components/file/index",
+    "z-user": "/components/user/index"
+  }
+}

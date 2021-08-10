@@ -1,0 +1,21 @@
+<view class="container">
+  <z-remark bind:inputtap="onInputRemark" remark="{{user.remark}}"></z-remark>
+
+  <view class="btn-container" wx:if="{{hasbBtn}}">
+    <l-button special bind:lintap="onCancel">
+      <view class="cancel-btn" hover-class="rect-hover" hover-stay-time="300">
+        <l-icon name="error" size="24" color="#ffffff"></l-icon>
+        <text>取消</text>
+      </view>
+    </l-button>
+
+    <l-button special bind:lintap="onSubmit">
+      <view class="confirm-btn" hover-class="rect-hover" hover-stay-time="300">
+        <l-icon name="success" size="24" color="#ffffff"></l-icon>
+        <text>确认</text>
+      </view>
+    </l-button>
+  </view>
+</view>
+
+<l-toast></l-toast>
