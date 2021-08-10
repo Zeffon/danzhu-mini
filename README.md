@@ -1,7 +1,7 @@
 ## 介绍
 
 主要是研发一个微信小程序，方便一些用户收发文件，然后统一管理或是以链接的方式发送给他人。
-![qrcode](https://github.com/zeffon/danzhu-mini/imgs/cover/qrcode.png)
+![qrcode](https://github.com/zeffon/danzhu-mini/raw/master/imgs/cover/qrcode.png)
 
 ## 功能点分析
 
